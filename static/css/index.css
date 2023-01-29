@@ -204,7 +204,7 @@ body {
     letter-spacing: .5px;
 }
 /* 响应式 */
-@media(width < 850px) {
+@media(width < 850px), (orientation: portrait) {
     .top_bar .menu_btn {
         display: flex;
         align-items: center;
