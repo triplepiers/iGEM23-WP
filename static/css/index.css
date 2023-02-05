@@ -8,6 +8,7 @@
     user-select: none;
     -webkit-user-drag: none;
     font-family: 'Montserrat', 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 a {
     text-decoration: none;
@@ -158,18 +159,28 @@ body {
 
 /* 主体部分 */
 .main {
+    /* display: none; */
     position: relative;
-    margin-top: 60px;
     width: 100%;
     min-height: 100vh;
+    transition: 1s;
+    transition-delay: .5s;
 }
-
+.main.active {
+    display: block;
+}
 .main section {
     position: relative;
     width: 100%;
     height: calc(100vh - 60px);
 }
-
+#sec1 {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    transition: 1s;
+}
 #sec1 .top {
     position: absolute;
     margin-top: 20px;
@@ -244,12 +255,35 @@ body {
 }
 
 #sec1 .bottom .main_img {
+    cursor: pointer;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     bottom: 60%;
     width: 50%;
     height: auto;
+}
+#sec1 .bottom .main_img:hover {
+    animation: swag 1s linear;
+}
+@keyframes swag {
+    10% {
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    50%,
+    100% {
+        transform: rotate(0deg);
+    }
 }
 #sec1 .bottom .main_img img {
     width: 100%;
@@ -274,10 +308,23 @@ body {
     position: absolute;
     top: 26.8%;
     left: 35%;
+    opacity: 0;
 }
 #sec2 .base .nerve img {
     width: 29vw;
     object-fit: cover;
+}
+#sec2.active .base .nerve {
+    animation: show 1s linear forwards;
+    animation-delay: 1s;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 #sec2 .base .nerve img.des {
     position: absolute;
@@ -290,6 +337,11 @@ body {
     position: absolute;
     top: 60%;
     left: 39%;
+    opacity: 0;
+}
+#sec2.active .base .virus {
+    animation: show 1s linear forwards;
+    animation-delay: 2s;
 }
 #sec2 .base .virus img {
     width: 5vw;
@@ -307,6 +359,11 @@ body {
     width: 37vw;
     top: 64%;
     left: 53%;
+    opacity: 0;
+}
+#sec2.active .base .persist {
+    animation: show 1s linear forwards;
+    animation-delay: 3s;
 }
 #sec2 .base .persist img {
     width: 100%;
@@ -320,6 +377,7 @@ body {
     gap: 4vh;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 #sec3 .title {
     font-family: 'Poppins', sans-serif;
@@ -384,11 +442,17 @@ body {
 }
 #sec3 .circle_wrap .m {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     width: 25vw;
     height: 25vw;
+}
+#sec3 .circle_wrap .m.show {
+    animation: swag 1s linear;
+    animation-delay: 1s;
 }
 #sec3 .circle_wrap .m img {
     width: 100%;
@@ -583,6 +647,7 @@ body {
     background-color: var(--d-green);
 }
 #sec5 .right_wrap .word {
+    opacity: 0;
     position: absolute;
     bottom: 10vh;
     right: 5vw;
@@ -603,7 +668,8 @@ body {
 
 #sec5 .left_wrap {
     position: absolute;
-    right: 65%;
+
+    right: 100%;
     top: 50%;
     transform: translateY(-50%);
     height: 80%;
@@ -611,6 +677,22 @@ body {
     display: flex;
     flex-direction: row-reverse;
     gap: 1vw;
+}
+#sec5.show .left_wrap{
+    animation: go_right .5s ease-out forwards;
+}
+#sec5.show .right_wrap .word {
+    opacity: 1;
+    transition: 1s;
+    transition-delay: .5s;
+}
+@keyframes go_right {
+    0% {
+        right: 100%;
+    }
+    100% {
+        right: 65%;
+    }
 }
 #sec5 .left_wrap .card {
     position: relative;
@@ -778,6 +860,14 @@ body {
     height: 24vw;
     background-image: url("../img/index/card.svg");
     background-size: cover;
+    opacity: 0;
+    top: 100px;
+    transition: .5s;
+    transition-delay: calc(var(--i) * .5s);
+}
+#sec6 .top .card_wrap.show .card {
+    opacity: 1;
+    top: 0;
 }
 #sec6 .top .card_wrap .card .img {
     position: absolute;

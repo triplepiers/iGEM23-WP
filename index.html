@@ -70,25 +70,25 @@
                 </div>
             </div>
         </div>
-        <div class="main">
-            <section id="sec1">
-                <div class="bottom">
-                    <img src="./static/img/index/sec1_bottom_back.png" alt="">
-                    <div class="word_wrap">
-                        <div class="word">
-                            <div class="right_top"></div>
-                            <div class="left_bottom"></div>
-                            Chronic diabetic wound is one of several common complications of diabetes
-                        </div>
-                    </div>
-                    <div class="main_img">
-                        <img src="./static/img/index/sec1_main.svg" alt="">
+        <!-- <section id="sec1">
+            <div class="bottom">
+                <img src="./static/img/index/sec1_bottom_back.png" alt="">
+                <div class="word_wrap">
+                    <div class="word">
+                        <div class="right_top"></div>
+                        <div class="left_bottom"></div>
+                        Chronic diabetic wound is one of several common complications of diabetes
                     </div>
                 </div>
-                <div class="top">
-                    <img src="./static/img/index/sec1_top.png" alt="">
+                <div class="main_img" id="enter">
+                    <img src="./static/img/index/sec1_main.svg" alt="">
                 </div>
-            </section>
+            </div>
+            <div class="top">
+                <img src="./static/img/index/sec1_top.png" alt="">
+            </div>
+        </section> -->
+        <div class="main" id="main" class="active">
             <section id="sec2">
                 <div class="base">
                     <img src="./static/img/index/sec2_base.png" alt="">
@@ -136,7 +136,7 @@
                             <p>early onset of symptoms</p>
                         </div>
                     </div>
-                    <div class="m">
+                    <div class="m" data-reveal>
                         <img src="./static/img/index/sec3_mid.png" alt="">
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                     </div>
                 </div>
             </section>
-            <section id="sec5">
+            <section id="sec5" data-reveal="">
                 <div class="right_wrap">
                     <div class="word">
                         <p>
@@ -244,15 +244,15 @@
                 </div>
                 <div class="top">
                     <div class="title">To explore our design details:</div>
-                    <div class="card_wrap">
-                        <div class="card">
+                    <div class="card_wrap" data-reveal>
+                        <div class="card" style="--i:0;">
                             <div class="img" id="cd1"></div>
                             <div class="word">
                                 <p>CURE</p>
                                 <p>MODULE</p>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" style="--i:1;">
                             <div class="img" id="cd2"></div>
                             <div class="word">
                                 <p>QUORUM</p>
@@ -260,7 +260,7 @@
                                 <p>MODULE</p>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" style="--i:2;">
                             <div class="img" id="cd3"></div>
                             <div class="word">
                                 <p>INFECTION</p>
@@ -268,7 +268,7 @@
                                 <p>MODULE</p>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" style="--i:3;">
                             <div class="img" id="cd4"></div>
                             <div class="word">
                                 <p>BIOSAFETY</p>
@@ -325,5 +325,28 @@
                 menu_btn.classList.add('active');
             }
         }
+        // 进入
+        // const enter = document.getElementById('enter');
+        // const main = document.getElementById('main');
+        // const sec2 = document.getElementById('sec2');
+        // enter.onclick = () => {
+        //     main.classList.add('active');
+        //     sec2.classList.add('active');
+        //     sec2.scrollIntoView(true);
+        // }
+        // scroll reveal
+        const revealElements = document.querySelectorAll('[data-reveal]');
+        const scrollReveal = function() {
+            len = revealElements.length;
+            for(var i = 0; i < len; i++) {
+                const isOnScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight;
+                if(isOnScreen) {
+                    revealElements[i].classList.add('show');
+                } else {
+                    revealElements[i].classList.remove('show');
+                }
+            }
+        }
+        window.addEventListener("scroll", scrollReveal);
     </script>
 </html>
