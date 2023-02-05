@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800'); 
+@import url('https://fonts.googleapis.com/css?family=Poppins:400'); 
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +7,7 @@
     list-style: none;
     user-select: none;
     -webkit-user-drag: none;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
 }
 a {
     text-decoration: none;
@@ -14,14 +17,18 @@ img {
 }
 :root {
     --gray: #6c757d;
-    --gray-dark: #343a40;
     --orange: #fd7e14;
     --font: #f8f9fa;
+    --dd-green: #047a6b;
+    --d-green: #55d4b1;
+    --l-green: #dcf4ed;
+    --ll-green: #e7f7f5;
 }
 body {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    background-color: #fff;
 }
 .top_bar {
     position: fixed;
@@ -30,15 +37,29 @@ body {
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: var(--gray-dark);
+    background-color: #fff;
 
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 60px;
+}
+/* 底下的横线 */
+.top_bar::after {
+    content: '';
+    width: calc(100% - 100px);
+    height: 1px;
+    background-color: var(--d-green);
+    position: absolute;
+    bottom: 0;
+    left: 50px;
 }
 .top_bar .logo_wrap {
     height: 100%;
-    background-color: #fd7e14;
+    padding: 7px 0;
+}
+.top_bar .logo_wrap img {
+    display: block;
+    height: 100%;
 }
 /* 选项 */
 .top_bar .menu_wrap {
@@ -57,13 +78,14 @@ body {
 }
 .top_bar .menu_wrap .menu_item .title {
     font-size: 15px;
+    font-weight: 800;
     letter-spacing: .5px;
-    color: var(--gray);
+    color: var(--d-green);
     transition: .3s;
 }
 .top_bar .menu_wrap .menu_item ion-icon {
-    color: var(--gray);
-    font-size: 15px;
+    color: var(--d-green);
+    font-size: 12px;
     position: relative;
     top: 2px;
     left: 2px;
@@ -72,24 +94,24 @@ body {
     transition-delay: 0s;
 }
 /* hover特效 */
-.top_bar .menu_wrap .menu_item:hover .title,
+/* .top_bar .menu_wrap .menu_item:hover .title,
 .top_bar .menu_wrap .menu_item:hover .title a
  {
     position: relative;
     color: var(--orange);
     text-shadow: 0 0 2px var(--orange),
     0 0 4px var(--orange);
-}
+} */
 /* active - 展开 */
-.top_bar .menu_wrap .menu_item:hover ion-icon {
+/* .top_bar .menu_wrap .menu_item:hover ion-icon {
     color: var(--orange);
     transform: rotate(-90deg);
-}
+} */
 /* 当前页指示 */
-.top_bar .menu_wrap .menu_item.cur .title {
+/* .top_bar .menu_wrap .menu_item.cur .title {
     color: var(--orange);
     text-decoration: underline;
-}
+} */
 /* 子菜单 */
 .top_bar .menu_wrap .menu_item .choice {
     position: absolute;
@@ -100,7 +122,7 @@ body {
     display: flex;
     flex-direction: column;
     
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(255,255,255,.7);
     backdrop-filter: blur(5px);
     transform: translateX(-50%);
     
@@ -110,14 +132,14 @@ body {
     overflow: hidden;
     height: 0;
 
-    box-shadow: 0 0 15px rgba(0,0,0,.8);
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
 }
 .top_bar .menu_wrap .menu_item:hover .choice {
     height: auto;
-    border-top: 3px solid var(--orange);
+    border-top: 3px solid var(--d-green);
 }
 .top_bar .menu_wrap .menu_item a {
-    color: var(--gray);
+    color: var(--d-green);
     transition: .3s;
 }
 .top_bar .menu_wrap .menu_item .choice li a {
@@ -126,32 +148,263 @@ body {
     width: 100%;
     text-transform: none;
     font-size: 15px;
-    color: var(--orange);
+    color: var(--d-green);
     transition: .5s;
 }
 .top_bar .menu_wrap .menu_item .choice li:hover a {
-    color: var(--gray-dark);
-    background-color: var(--orange);
+    color: #fff;
+    background-color: var(--d-green);
 }
 .top_bar .menu_btn {
     display: none;
 }
 
-/* 测试用banner */
-.banner {
+/* 主体部分 */
+.main {
     position: relative;
     margin-top: 60px;
     width: 100%;
+    min-height: 100vh;
+    /* background-color: #aaa; */
 }
-.banner img {
+
+.main section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    border: 1px solid #fd7e14;
+}
+
+#sec1 .top {
+    position: absolute;
+    margin-top: 20px;
+    left: 50px;
+    width: calc(100% - 100px);
+    height: 8vh;
+    border-radius: 16px;
+    background-color: var(--d-green);
+}
+
+#sec1 .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* height: 100px; */
+    /* background-color: red; */
+}
+#sec1 .bottom img {
     width: 100%;
     object-fit: cover;
+}
+#sec1 .bottom .word_wrap {
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#sec1 .bottom .word_wrap .word {
+    position: relative;
+    padding: 20px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+#sec1 .bottom .word_wrap .word .right_top {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 5px;
+    width: 30%;
+    background-color: var(--d-green);
+}
+#sec1 .bottom .word_wrap .word .right_top::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 20px;
+    background-color: var(--d-green);
+}
+#sec1 .bottom .word_wrap .word .left_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 30%;
+    background-color: var(--d-green);
+}
+#sec1 .bottom .word_wrap .word .left_bottom::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 20px;
+    background-color: var(--d-green);
+}
+
+#sec1 .bottom .main_img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
+    width: 50%;
+    height: auto;
+}
+#sec1 .bottom .main_img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#sec5 .right_wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 76%;
+    background-color: var(--l-green);
+}
+#sec5 .right_wrap .word::before {
+    content: '';
+    position: absolute;
+    right: 1vw;
+    top: -4vw;
+    height: 1vw;
+    width: 10%;
+    background-color: var(--d-green);
+}
+#sec5 .right_wrap .word {
+    position: absolute;
+    bottom: 10vh;
+    right: 5vw;
+    width: 60%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7vw;
+    line-height: 2.5vw;
+    font-weight: 500;
+    color: var(--dd-green);
+}
+#sec5 .right_wrap .word p {
+    margin-bottom: 2vw;
+}
+#sec5 .right_wrap .word p strong {
+    font-weight: 500;
+    color: var(--d-green);
+}
+
+#sec5 .left_wrap {
+    position: absolute;
+    right: 65%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1vw;
+}
+#sec5 .left_wrap .card {
+    position: relative;
+    flex-shrink: 0;
+    height: 100%;
+    width: 30vw;
+    border-radius: 3vw;
+    background-color: var(--d-green);
+    box-shadow:  2px 5px 5px rgba(0,0,0,.1);
+}
+#sec5 .left_wrap .card .title {
+    position: absolute;
+    left: 3vw;
+    bottom: 3vw;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5vw;
+    line-height: 5.5vw;
+    font-weight: 900;
+}
+#sec6 .back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#sec6 .back .top {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 90%;
+    height: 45%;
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
+    background-image: linear-gradient(to bottom, var(--l-green), transparent);
+}
+#sec6 .back .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 25vw;
+    width: 50%;
+    height: 30%;
+    background-color: #fd7e14;
+}
+#sec7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, transparent 10%, var(--l-green) 40%, var(--l-green) 60%, transparent 90%);
+}
+#sec7 .card {
+    position: relative;
+    height: 50%;
+    width: 70%;
+    border-radius: 5vh;
+    background-color: #fff;
+    box-shadow: 2px 5px 10px rgba(0,0,0,.1);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dd-green);
+}
+#sec7 .card .word {
+    font-size: 2vw;
+    font-weight: 600;
+    position: absolute;
+    top: 6vh;
+    left: 5vw;
+    width: 70%;
+}
+#sec7 .card .word .rotate {
+    margin: 2vw 0;
+    font-size: 3vw;
+    font-weight: 800;
+    transform: rotate(-3deg);
+}
+#sec7 .card .button {
+    position: absolute;
+    bottom: 6vh;
+    right: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+    padding: 0 1.5vw;
+    background-color: var(--d-green);
+    border-radius: 1.8vw;
+}
+#sec7 .card .button a {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 500;
 }
 /* 底栏 */
 #footer {
     width: 100%;
-    background-color: var(--gray-dark);
-    border-top: 4px solid var(--orange);
+    background-color: #fff;
+    border-top: 4px solid var(--d-green);
 
     display: flex;
     flex-direction: row;
@@ -163,7 +416,7 @@ body {
     font-size: 15px;
     letter-spacing: .5px;
     font-weight: 500;
-    color: var(--orange);
+    color: var(--d-green);
     text-transform: uppercase;
 }
 #footer .follow {
@@ -190,6 +443,9 @@ body {
 }
 #footer .follow .follow_list li img {
     width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--gray);
     object-fit: cover;
 }
 #footer .contact {
@@ -204,7 +460,7 @@ body {
     letter-spacing: .5px;
 }
 /* 响应式 */
-@media(width < 850px), (orientation: portrait) {
+@media(width < 1035px), (orientation: portrait) {
     .top_bar .menu_btn {
         display: flex;
         align-items: center;
@@ -214,13 +470,13 @@ body {
         transition: .3s;
     }
     .top_bar .menu_btn.active {
-        color: var(--orange);
+        color: var(--d-green);
     }
     .top_bar .menu_wrap {
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        border-top: 4px solid var(--orange);
-        background-color: rgba(0,0,0,.6);
+        border-top: 4px solid var(--d-green);
+        background-color: rgba(255,255,255,rgba(255,255,255,.7));
         box-shadow: 0 0 15px rgba(0,0,0,.3);
         backdrop-filter: blur(5px);
 
@@ -257,7 +513,7 @@ body {
     }
     .top_bar .menu_wrap .menu_item .choice {
         border-radius: 5px;
-        box-shadow: 0 0 15px rgba(0,0,0,.1);
+        box-shadow: 0 0 15px rgba(0,0,0,.2);
         flex-shrink: 0;
         width: 100%;
         position: relative;
