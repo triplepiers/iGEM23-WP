@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <!-- <section id="sec1">
+        <section id="sec1">
             <div class="bottom">
                 <img src="./static/img/index/sec1_bottom_back.png" alt="">
                 <div class="word_wrap">
@@ -87,7 +87,7 @@
             <div class="top">
                 <img src="./static/img/index/sec1_top.png" alt="">
             </div>
-        </section> -->
+        </section>
         <div class="main" id="main" class="active">
             <section id="sec2">
                 <div class="base">
@@ -278,7 +278,7 @@
                     </div>
                 </div>
             </section>
-            <section id="sec7">
+            <section id="sec7" style="margin-top: 0;">
                 <div class="card">
                     <div class="word">
                         <p>We are committed to making our design a</p>
@@ -326,14 +326,14 @@
             }
         }
         // 进入
-        // const enter = document.getElementById('enter');
-        // const main = document.getElementById('main');
-        // const sec2 = document.getElementById('sec2');
-        // enter.onclick = () => {
-        //     main.classList.add('active');
-        //     sec2.classList.add('active');
-        //     sec2.scrollIntoView(true);
-        // }
+        const enter = document.getElementById('enter');
+        const main = document.getElementById('main');
+        const sec2 = document.getElementById('sec2');
+        enter.onclick = () => {
+            main.classList.add('active');
+            sec2.classList.add('active');
+            sec2.scrollIntoView(true);
+        }
         // scroll reveal
         const revealElements = document.querySelectorAll('[data-reveal]');
         const scrollReveal = function() {
