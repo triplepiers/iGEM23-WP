@@ -882,6 +882,10 @@ body {
 
     padding: 25px 50px;
 }
+#footer .web_icon img {
+    width: 24vw;
+    object-fit: cover;
+}
 #footer .title {
     font-size: 15px;
     letter-spacing: .5px;
