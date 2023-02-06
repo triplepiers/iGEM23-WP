@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <!-- <section id="sec1">
+        <section id="sec1">
             <div class="bottom">
                 <img src="./static/img/index/sec1_bottom_back.png" alt="">
                 <div class="word_wrap">
@@ -88,8 +88,8 @@
             <div class="top">
                 <img src="./static/img/index/sec1_top.png" alt="">
             </div>
-        </section> -->
-        <div class="main active" id="main">
+        </section>
+        <div class="main" id="main">
             <section id="sec2">
                 <div class="base">
                     <img src="./static/img/index/sec2_base.png" alt="">
@@ -327,14 +327,14 @@
             }
         }
         // 进入
-        // const enter = document.getElementById('enter');
-        // const main = document.getElementById('main');
-        // const sec2 = document.getElementById('sec2');
-        // enter.onclick = () => {
-        //     main.classList.add('active');
-        //     sec2.classList.add('active');
-        //     sec2.scrollIntoView(true);
-        // }
+        const enter = document.getElementById('enter');
+        const main = document.getElementById('main');
+        const sec2 = document.getElementById('sec2');
+        enter.onclick = () => {
+            main.classList.add('active');
+            sec2.classList.add('active');
+            sec2.scrollIntoView(true);
+        }
         // scroll reveal
         const revealElements = document.querySelectorAll('[data-reveal]');
         const scrollReveal = function() {
