@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <section id="sec1">
+        <!-- <section id="sec1">
             <div class="bottom">
                 <img src="./static/img/index/sec1_bottom_back.png" alt="">
                 <div class="word_wrap">
@@ -88,8 +88,8 @@
             <div class="top">
                 <img src="./static/img/index/sec1_top.png" alt="">
             </div>
-        </section>
-        <div class="main" id="main" class="active">
+        </section> -->
+        <div class="main active" id="main">
             <section id="sec2">
                 <div class="base">
                     <img src="./static/img/index/sec2_base.png" alt="">
@@ -163,50 +163,50 @@
                     </div>
                 </div>
                 <div class="map">
-                    <div class="top">
+                    <div class="top" data-reveal>
                         <div class="arrow">
                             <img src="./static/img/index/sec4_top_m.png" alt="">
                         </div>
-                        <div class="left step">
+                        <div class="left step" style="--i:0;">
                             <img src="./static/img/index/sec4_top_l.png" alt="">
                         </div>
-                        <div class="right step">
+                        <div class="right step" style="--i:1;">
                             <img src="./static/img/index/sec4_top_r.png" alt="">
                         </div>
                     </div>
-                    <div class="bottom">
+                    <div class="bottom" data-reveal>
                         <img src="./static/img/index/sec4_back.png" alt="">
-                        <div class="s_arrow" id="a1">
+                        <div class="s_arrow" id="a1" style="--i:0;">
                             <img src="./static/img/index/arrow1.png" alt="">
                         </div>
                         <div class="step" id="s1">
                             <img src="./static/img/index/step1.png" alt="">
                         </div>
-                        <div class="s_arrow" id="a2">
+                        <div class="s_arrow" id="a2" style="--i:1;">
                             <img src="./static/img/index/arrow2.png" alt="">
                         </div>
                         <div class="step" id="s2">
                             <img src="./static/img/index/step2.png" alt="">
                         </div>
-                        <div class="s_arrow" id="a3">
+                        <div class="s_arrow" id="a3" style="--i:2;">
                             <img src="./static/img/index/arrow3.png" alt="">
                         </div>
                         <div class="step" id="s3">
                             <img src="./static/img/index/step3.png" alt="">
                         </div>
-                        <div class="s_arrow" id="a4">
+                        <div class="s_arrow" id="a4" style="--i:3;">
                             <img src="./static/img/index/arrow4.png" alt="">
                         </div>
                         <div class="step" id="s4">
                             <img src="./static/img/index/step4.png" alt="">
                         </div>
-                        <div class="s_arrow" id="a5">
+                        <div class="s_arrow" id="a5" style="--i:4;">
                             <img src="./static/img/index/arrow5.png" alt="">
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="sec5" data-reveal="">
+            <section id="sec5" data-reveal>
                 <div class="right_wrap">
                     <div class="word">
                         <p>
@@ -327,14 +327,14 @@
             }
         }
         // 进入
-        const enter = document.getElementById('enter');
-        const main = document.getElementById('main');
-        const sec2 = document.getElementById('sec2');
-        enter.onclick = () => {
-            main.classList.add('active');
-            sec2.classList.add('active');
-            sec2.scrollIntoView(true);
-        }
+        // const enter = document.getElementById('enter');
+        // const main = document.getElementById('main');
+        // const sec2 = document.getElementById('sec2');
+        // enter.onclick = () => {
+        //     main.classList.add('active');
+        //     sec2.classList.add('active');
+        //     sec2.scrollIntoView(true);
+        // }
         // scroll reveal
         const revealElements = document.querySelectorAll('[data-reveal]');
         const scrollReveal = function() {

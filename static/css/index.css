@@ -388,30 +388,51 @@
     align-items: center;
 }
 #sec4 .map .top .arrow {
+    opacity: 0;
     position: absolute;
     width: 30vw;
     right: 40%;
     top: 50%;
     transform: translateY(-50%);
+    transition: 0s;
+}
+#sec4 .map .top.show .arrow {
+    opacity: 1;
+    transition: .5s;
+    transition-delay: 1s;
 }
 #sec4 .map .top .arrow img {
     width: 100%;
     object-fit: cover;
 }
 #sec4 .map .top .step {
+    opacity: 0;
     width: 20vw;
     height: auto;
+    transition: 0s;
 }
 #sec4 .map .top .step img {
     width: 100%;
     object-fit: cover;
 }
+#sec4 .map .top.show .step {
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: calc(var(--i) * 1.5s);
+}
 #sec4 .map .bottom {
+    opacity: 0;
+    transition: 0s;
     position: relative;
     width: 100%;
     height: auto;
     margin-top: -10vw;
     margin-bottom: -5vw;
+}
+#sec4 .map .bottom.show {
+    opacity: 1;
+    transition: opacity 2s;
+    transition-delay: 2s;
 }
 #sec4 .map .bottom img {
     width: 100%;
@@ -421,10 +442,22 @@
 #sec4 .map .bottom .step {
     position: absolute;
 }
+#sec4 .map .bottom.show .s_arrow {
+    animation: blink 7.5s linear infinite;
+    animation-delay: calc(3.5s + var(--i) * 1.5s);
+}
 #sec4 .map .bottom .s_arrow img,
 #sec4 .map .bottom .step img {
     width: 100%;
     object-fit: cover;
+}
+@keyframes blink {
+    0%, 10% {
+        opacity: 0;
+    }
+    5%, 15%, 100% {
+        opacity: 1;
+    }
 }
 #a1 {
     top: 13%;
