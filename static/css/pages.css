@@ -1,0 +1,130 @@
+/* banner */
+.banner_wrap {
+    position: sticky;
+    z-index: -1;
+    margin-top: 60px;
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    padding-bottom: 8vh;
+    gap: 5vh;
+}
+.banner_wrap .top {
+    width: 100%;
+    height: auto;
+}
+.banner_wrap .top img {
+    width: 100%;
+    object-fit: cover;
+}
+.banner_wrap .title_wrap {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/discription/banner.png");
+    background-size: cover;
+    background-position: center;
+    border: 20px solid var(--d-green);
+}
+.banner_wrap .title_wrap .title {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5vw;
+    font-weight: 700;
+    letter-spacing: .2vw;
+    -webkit-text-stroke: 15px var(--d-green);
+}
+
+.banner_wrap .title_wrap .title::before {
+    content: 'Discription';
+    position: absolute;
+    -webkit-text-stroke: 0;
+    color: #fff;
+}
+.banner_wrap .title_wrap .title::after {
+    content: '';
+    position: absolute;
+    top: 9vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8vw;
+    height: 1.5vw;
+    background-color: var(--d-green);
+}
+/* 正文 */
+.body {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    padding-top: 5vw;
+}
+.menu {
+    opacity: 0;
+    transition: .5s;
+    position: fixed;
+    top: 63px;
+    width: 25%;
+    color: var(--dd-green);
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    font-size: 1.5vw;
+    gap: 1.5vw;
+    font-weight: 600;
+}
+.menu.show {
+    opacity: 1;
+}
+.body .menu_back {
+    flex-shrink: 0;
+    width: 25%;
+    border-radius: 3px;
+    box-shadow: 8px 0 11px rgba(109, 183, 162, 0.42);
+    background-color: var(--l-green);
+}
+.body .content {
+    padding: 50px 100px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 16vw;
+    color: var(--dd-green);
+}
+.body .content h1 strong {
+    font-size: 4vw;
+}
+.body .content h1 {
+    font-size: 3vw;
+    margin-bottom: 3vw;
+}
+.body .content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 300;
+    margin-top: 1.5vw;
+}
+.body .content p:first-child {
+    margin-top: 0;
+}
+.body .content .img {
+    width: 100%;
+    height: auto;
+    margin-top: 5vw;
+}
+.body .content .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.body .content .ref h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2.5vw;
+}
