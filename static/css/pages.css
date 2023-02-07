@@ -40,7 +40,6 @@
     letter-spacing: .2vw;
     -webkit-text-stroke: 15px var(--d-green);
 }
-
 .banner_wrap .title_wrap .title::before {
     content: attr(title);
     position: absolute;
