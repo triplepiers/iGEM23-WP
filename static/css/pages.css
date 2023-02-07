@@ -42,7 +42,7 @@
 }
 
 .banner_wrap .title_wrap .title::before {
-    content: 'Discription';
+    content: attr(title);
     position: absolute;
     -webkit-text-stroke: 0;
     color: #fff;
