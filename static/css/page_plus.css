@@ -1,0 +1,48 @@
+/* 一级标题有下划线的版本 */
+.body .content h1 {
+    width: fit-content;
+    border-bottom: 2vw solid var(--d-green);
+}
+.body .content .ref h1 {
+    border: none;
+}
+
+.menu::before {
+    content: '';
+    height: 100%;
+    width: 5px;
+    background-color: var(--d-green);
+    position: absolute;
+    left: 13px;
+    top: 30px;
+}
+.menu .t1:hover {
+    color: var(--d-green);
+    font-weight: 800;
+}
+.menu .t1:hover .t2 {
+    color: var(--dd-green);
+}
+.menu .t1 .t2 {
+    display: none;
+    opacity: 0;
+    font-size: 1.3vw;
+    font-weight: 500;
+    padding-left: 3vw;
+    padding-top: 1vw;
+}
+.menu .t1.selected .t2 {
+    display: block;
+    animation: show_h2 linear 1s forwards;
+}
+.menu .t1.selected .t2:hover {
+    color: var(--d-green);
+}
+@keyframes show_h2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

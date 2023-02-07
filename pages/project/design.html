@@ -6,7 +6,70 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <link rel="stylesheet" href="../../static/css/basic.css">
+        <link rel="stylesheet" href="../../static/css/pages.css">
+        <link rel="stylesheet" href="../../static/css/page_plus.css">
     </head>
+    <style>
+        :root {
+            --banner: url('../../static/img/design/banner.png');
+        }
+        .body .content .btn {
+            width: fit-content;
+            border: 2px solid var(--d-green);
+            padding: 1vw;
+        }
+        .body .content .btn a {
+            text-align: center;
+            font-size: 1.2vw;
+            color: var(--d-green);
+        }
+        .body .content .binary {
+            width: 100%;
+            display: flex;
+            margin-top: 1.5vw;
+            justify-content: space-between;
+            padding: 0 5vw;
+        }
+        .body .content .binary .pic {
+            flex-shrink: 0;
+            width: 40%;
+            position: relative;
+            top: 1vw;
+        }
+        .body .content .binary .pic img {
+            width: 100%;
+            object-fit: cover;
+        }
+        .body .content .binary .word ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .body .content .binary .word ul li {
+            font-size: 1.3vw;
+            font-weight: 500;
+            position: relative;
+        }
+        .body .content .binary .word ul li::before {
+            content: '· ';
+            position: absolute;
+            left: -.7vw;
+            top: -.1vw;
+            font-weight: 600;
+        }
+        .body .content .two_pic {
+            width: 100%;
+            height: 25vw;
+            display: flex;
+            margin: 5vw 0;
+            justify-content: space-evenly;
+        }
+        .body .content .two_pic img {
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
     <body>
         <!-- 顶栏 -->
         <div class="top_bar">
@@ -71,6 +134,229 @@
             </div>
         </div>
         
+        <div class="banner_wrap">
+            <div class="top">
+                <img src="../../static/img/index/sec1_top.png" alt="">
+            </div>
+            <div class="title_wrap">
+                <div class="title" title="Design">Design</div>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="menu_back"></div>
+            <div class="content">
+                <section>
+                    <h1><strong>Chassis</strong></h1>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>Chlamydomonas reinhardtii</strong> was chosen as the chassis for treating chronic diabetic wounds for the following reasons :
+                    </p>
+                    <div class="binary">
+                        <div class="pic">
+                            <img src="../../static/img/design/fig1.png" alt="">
+                        </div>
+                        <div class="word">
+                            <ul>
+                                <li>Photosynthetic autotrophic lifestyle,<br>
+                                    avoiding the addition of nutrients in dressings</li>
+                                <li>Released oxygen promotes wound healing</li>
+                                <li>Clear genetic background<br>
+                                    and rich genetic modification tools</li>
+                                <li>Efficient chloroplast expression system</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;It is worth noting that we finally selected the chloroplast of Chlamydomonas reinhardtii as the transformation acceptor because of its higher expression level compared to nuclear genes, less silencing phenomenon, and lower position effect [1]. Also, the prokaryotic-like expression system of chloroplasts also brings convenience for us to transplant the genetic elements in bacteria into algae.
+                    </p>
+                </section>
+                <section>
+                    <h1>
+                        <strong>Treatment</strong><br>
+                        <strong>Module</strong>
+                    </h1>
+                    <section class="s2">
+                        <h2>
+                            Secretion of AGEs<br>
+                            Binding Protein
+                        </h2>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Studies have shown that excessive accumulation of AGEs may be one of the important barriers of diabetic wound healing. With the progression of diabetes, the concentration of AGEs accumulated in the skin is increasing. With the increase of glucose content and AGEs concentration, the proliferation rate of endothelial cells and fibroblasts is gradually inhibited, and the tolerance of endothelial cells to high glucose and AGEs is weakened. [2]
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Therefore, the human-derived AGER protein sequence is introduced into the engineered cells, and the secretory signal peptide is added to achieve the expression of soluble AGEs receptors, which can alleviate the accumulation of AGEs in diabetic wounds [3] and solve the problems of abnormal inflammatory bands and macrophage disorder.
+                        </p>
+                        <div class="img" style="margin-top: 0;">
+                            <img src="../../static/img/design/fig2.png" alt="">
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            Secretion of epidermal<br>
+                            Growth Factor
+                        </h2>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Human epidermal growth factor ( hEGF ) is a small polypeptide composed of 53 amino acids. hEGF has a wide range of biological effects and can strongly promote the growth of various epidermal tissues. It has been used in the treatment of burns, ulcers, various traumas, and corneal injuries in medicine.[4] Our engineered cells promote wound healing by secreting hEGF.
+                        </p>
+                        <div class="img" style="margin-top: 1vw;">
+                            <img src="../../static/img/design/fig3.png" alt="">
+                        </div>
+                    </section>
+                    <section>
+                        <h2>
+                            Use Luciferase to Report<br>
+                            the Working State of Cells
+                        </h2>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;In order to visualize the working state of the treatment module, facilitate the user's better evaluation and prevent the delay of the disease caused by the quality problem of the dressing, we designed the working state report function. This function is achieved by introducing luciferase ( G-Luc ) from marine copepods into engineered cells. While the functional protein is expressed, the engineering cells secrete luciferase to the extracellular. The luciferase reacts with the natural D-luciferin pre-loaded in the hydrogel and emits green fluorescence, marking that the pathway is working.
+                        </p>
+                        <div class="img" style="margin-top: 0;">
+                            <img src="../../static/img/design/fig4.png" alt="">
+                            <div class="des">Indicated Normal Working State</div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <h1>
+                        <strong>Infection Report</strong><br>
+                        <strong>Module</strong>
+                    </h1>
+                    <section class="s2">
+                        <h2>
+                            Use LasR / LasI System to<br>
+                            Sense Bacterial Infection
+                        </h2>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;The quorum sensing system of Pseudomonas aeruginosa is a multi-level ordered complex, and the two most important protein components are LasR and LasI.[5]
+                        </p>
+                        <div class="img" style="margin-top: 2vw;margin-bottom: 4vw;">
+                            <img src="../../static/img/design/fig5.png" alt="">
+                            <div class="des">LasR/LasI System in Pseudomonas Aeruginosa</div>
+                        </div>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;In engineered Chlamydomonas reinhardtii, we introduced a sequence encoding the receptor protein LasR. When the wound is infected and P.aeruginosa proliferates and releases AHL, the chassis will sense the signal and perform subsequent reporting functions by simulating P.aeruginosa.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>
+                            Use Chromoprotein<br>
+                            As a Signal
+                        </h2>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;In order to generate a primary hazard alert in those C.reinhardtii who was first exposed to the infection signal, we loaded a reporting line in its chloroplasts to guide the expression of chromoprotein through the Pseudomonas aeruginosa quorum sensing promoter pLasI.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>
+                            Synchronizing Cell Behavior<br>
+                            Using Quorum Sensing
+                        </h2>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Considering the three-dimensional structure of the dressing, in order to keep the signal synchronization as much as possible and amplify the signal strength, we decided to add a quorum sensing module to achieve this function ( see module 3 ), and the synthesis of its sensing trigger molecules will be coupled with the primary reporting part of the line.
+                        </p>
+                        <div class="img" style="margin-top: 2vw;">
+                            <img src="../../static/img/design/fig6_top.png" alt="">
+                        </div>
+                        <div class="img" style="margin-top: 0;">
+                            <img src="../../static/img/design/fig6_bot.png" alt="">
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <h1>
+                        <strong>Quorum Sensing</strong><br>
+                        <strong>Module</strong>
+                    </h1>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;The only C.reinhardtii that are able to access the AHL signaling molecules produced by bacteria and report bacterial infections are those at the bottom of the hydrogel. The color they produce is weak. To amplify this color signal and make it spread throughout the gel to facilitate rapid detection of wound infection problems, we coupled a QS-like pathway to the bacterial infection reporting pathway in C.reinhardtii.
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;We chose the QS system of Methylobacter tundripaludum to act in C.reinhardtii. [6][7] M.undripaludum does not cause human infections and the AHL it produces does not overlap with the AHL of other bacteria that can be toxic to humans. the AHL of M.tundripaludum is 3-OH-C10-HSL, whose synthetic protein is MbaI and the binding protein is MbaR. The complex formed by AHL and MbaR can act as an activator to promote the transcription of genes. PsaD is a constitutive promoter in C.reinhardtii.
+                    </p>
+                    <div class="img">
+                        <img src="../../static/img/design/fig7_top.png" alt="">
+                        <div class="des">Quorum Sensing Diagram</div>
+                    </div>
+                    <div class="img">
+                        <img src="../../static/img/design/fig7_bot.png" alt="">
+                        <div class="des">Quorum Sensing Pathway Design</div>
+                    </div>
+                </section>
+                <section>
+                    <h1>
+                        <strong>Biosafety</strong><br>
+                        <strong>Module</strong>
+                    </h1>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Biosafety issues after genetic modification have always been a concern and doubt for people in the face of synthetic biology. In order to clear our engineered cells after performing functions to prevent cell leakage, and avoid horizontal gene transfer and gene pollution, we decided to design an iron-induced BAX-mediated suicide gene pathway.
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;the constitutive promoter promotes the expression of Bax protein. The anti-apoptotic protein Bcl can inhibit Bax, and the inhibitory effect of Bl-1 on Bax in this family has been confirmed in previous iGEM projects, playing an inhibitory role in the entire suicide pathway. The ATX1 promoter is an endogenous iron-responsive promoter in C.reinhardtii, which initiates the expression of downstream genes in the absence of iron. By adding iron ions to the dressing, we ensure that the engineered algae ' cut themselves off ' when leaving the dressing.
+                    </p>
+                    <div class="img">
+                        <img src="../../static/img/design/fig8.png" alt="">
+                    </div>
+                </section>
+                <section>
+                    <h1><strong>Hardware</strong></h1>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Based on the sterile environment of the wound, we designed the dressing to ensure the sterile environment and added protective gear to detect the wound in real-time. Since it is mainly aimed at the elderly, the feedback mechanism uses intuitive protective gear light changes and alarm sounds to inform patients of the wound situation.
+                    </p>
+                    <div class="two_pic">
+                        <div class="left">
+                            <img src="../../static/img/design/fig9_l.png" alt="">
+                        </div>
+                        <div class="right">
+                            <img src="../../static/img/design/fig9_r.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <a href="../experiments/hardware.html" target="_top">
+                            <div>Explore More Detail</div>
+                            <div>About Our Hardware Design</div>
+                        </a>
+                    </div>
+                </section>
+                <section class="ref">
+                    <h1>REFERENCES</h1>
+                </section>
+            </div>
+        </div>
+
+        <div class="menu show">
+            <div class="t1">Chassis</div>
+            <div class="t1">Treatment Module
+                <div class="t2">
+                    Secretion of AGEs<br>
+                    Binding Protein
+                </div>
+                <div class="t2">
+                    Secretion of Epidermal<br>
+                    Growth Factor
+                </div>
+                <div class="t2">
+                    Use Iuciferase to Report<br>
+                    the Working State of Cells
+                </div>
+            </div>
+            <div class="t1">Infection Report Module
+                <div class="t2">
+                    Use LasR / LasI System to<br>
+                    Sense Bacterial Infection
+                </div>
+                <div class="t2">
+                    Use Chromoprotein<br>
+                    As a Signal
+                </div>
+                <div class="t2">
+                    Synchronizing Cell Behavior<br>
+                    Using Quorum Sensing
+                </div>
+            </div>
+            <div class="t1">Quorum Sensing Module</div>
+            <div class="t1">Biosafety Module</div>
+            <div class="t1">Hardware</div>
+        </div>
 
         <!-- 底栏 -->
         <footer id="footer">
@@ -95,29 +381,15 @@
             </div>
         </footer>
     </body>
+    <script src="../../static/js/basic.js"></script>
     <script>
-        // 菜单展开
-        const menu_btn = document.getElementById('menu');
-        menu_btn.onclick = () => {
-            if(menu_btn.classList.contains('active')) {
-                menu_btn.classList.remove('active');
-            } else {
-                menu_btn.classList.add('active');
-            }
+        const t1 = document.querySelectorAll('.t1');
+        const clear_t1 = () => {
+            t1.forEach(item => item.classList.remove('selected'));
         }
-        // scroll reveal
-        // const revealElements = document.querySelectorAll('[data-reveal]');
-        // const scrollReveal = function() {
-        //     len = revealElements.length;
-        //     for(var i = 0; i < len; i++) {
-        //         const isOnScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight;
-        //         if(isOnScreen) {
-        //             revealElements[i].classList.add('show');
-        //         } else {
-        //             revealElements[i].classList.remove('show');
-        //         }
-        //     }
-        // }
-        // window.addEventListener("scroll", scrollReveal);
+        t1.forEach(item => item.addEventListener('click', () => {
+            clear_t1();
+            item.classList.add('selected');
+        }))
     </script>
 </html>
