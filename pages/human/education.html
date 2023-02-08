@@ -11,7 +11,52 @@
     </head>
     <style>
         :root {
-            --banner: url('../../static/img/design/banner.png');
+            --banner: url('../../static/img/education/banner.png');
+        }
+        .pa_wrap {
+            margin-top: 1.5vw;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .pa_wrap ul {
+            opacity: 0;
+            transition: .5s;
+            display: flex;
+            gap: 2vw;
+            font-size: 1.2vw; color: var(--d-green); font-weight: 700;
+            text-decoration: underline;
+        }
+        .pa_wrap ul.show {
+            opacity: 1;
+        }
+        .img_scroll {
+            margin-top: 2vw;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 30vw;
+            overflow-y: scroll;
+        }
+        .img_scroll .img_wrap {
+            width: 40%;
+        }
+        .img_scroll .img_wrap img {
+            width: 100%;
+        }
+        .img_scroll ~ .des {
+            margin-top: 1vw;
+            width: 100%;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #858686;
+        }
+        .two_pic {
+            margin: 2vw 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
         }
     </style>
     <body>
@@ -98,10 +143,10 @@
                 <section>
                     <h1>Questionnaire</h1>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;In order to find out how much the public knows about keywords such as diabetic foot, synthetic biology and iGEM, we designed a questionnaire. We tried to make our questionnaire gentle, valid and not offensive to anyone, taking into account the protection of personal privacy and respect for patients. We posted it on a public platform and called for people to fill it in. We were very grateful and surprised to receive 178 responses. The data from the questionnaire was tallied and we drew conclusions. These findings have helped us to design targeted Education content.
+                        &nbsp;&nbsp;&nbsp;&nbsp;In order to find out how much the public knows about keywords such as diabetic foot, synthetic biology and iGEM, we designed a questionnaire. We tried to make our questionnaire gentle, valid and not offensive to anyone, taking into account the protection of personal privacy and respect for patients. We posted it on a public platform and called for people to fill it in. We were very grateful and surprised to receive <b>178 responses</b>. The data from the questionnaire was tallied and we drew conclusions. These findings have helped us to design targeted Education content.
                     </p>
-                    <div class="btn">
-                        问卷题目
+                    <div class="btn" style="margin-top: 1.5vw;">
+                        <a href="../../static/attachment/Questionnaire.docx" download="Questionnaire.docx">Download  Questionnaire</a>
                     </div>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;In order to better understand the information contained in the questionnaire responses, a summary of the data analysis and visualisation of the questionnaire was done.
@@ -121,26 +166,31 @@
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;The survey was carried out successfully with 178 participants. It is distributed at all age levels. Most participants are between 18 and 30 years old (87.64%). Because of the wide range of surveys we distributed, we basically received questionnaires from all provinces in the country, most of which were from Zhejiang Province.
                     </p>
-                    <div class="img">
-                        两张图？
+                    <div class="two_pic">
+                        <div>
+                            <img src="../../static/img/education/fig1_1.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../../static/img/education/fig1_2.png" alt="">
+                        </div>
                     </div>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;We first asked the people surveyed whether they had heard of chronic wounds caused by diabetes ulcers and how they learned about them. However, as shown in the figure, about three quarters of people have never heard of chronic wounds caused by diabetes ulcers, and the ways to understand them are relatively scattered, among which more are learned through popular science articles and short videos.
                     </p>
-                    <div class="img">
-                        一张图？
+                    <div class="img" style="width: 60%; margin: 2vw 0; margin-left: 20%;">
+                        <img src="../../static/img/education/fig2.png" alt="">
                     </div>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;In order to understand people's understanding of the basic situation of chronic wounds caused by diabetes ulcers, we asked for information about the three statements (Q1: Do you know that chronic wounds caused by diabetes ulcers may lead to amputation? Q2: Do you know that the prevalence of chronic wounds caused by diabetes ulcers is higher in men than in women? Q3: Do you know that the prevalence of chronic wounds caused by diabetes ulcers is higher in the elderly than in the young?) The results are shown in the figure, More than half of the people do not know this information. These information shows that people have very little knowledge about chronic wounds caused by diabetes ulcers and lack of relevant knowledge storage.
                     </p>
-                    <div class="img">
-                        三张图？
+                    <div class="img" style="margin: 2vw 0;">
+                        <img src="../../static/img/education/fig3.png" alt="">
                     </div>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;We also asked about the treatment of chronic wounds caused by diabetes ulcers (Q1: Do you think the causes of chronic wounds caused by diabetes ulcers include? Q2: Do you think chronic wounds caused by diabetes ulcers are easy to cure? Q3: Do you know that biological dressings can treat chronic wounds caused by diabetes ulcers? Q4: Do you think there are effective ways to treat chronic wounds caused by diabetes ulcers?) The results are also not optimistic, In addition to the fact that people know a lot about the causes of chronic wounds of diabetes ulcers and whether they are easy to treat (but both are less than 50%), they do not know much about other effective treatments.
                     </p>
-                    <div class="img">
-                        四张图？
+                    <div class="img" style="margin: 2vw 0;">
+                        <img src="../../static/img/education/fig4.png" alt="">
                     </div>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;To sum up, we can find that people know little about chronic wounds of diabetes ulcers from the survey of chronic wounds of diabetes ulcers, so it is extremely necessary to carry out relevant science education and product publicity.
@@ -154,17 +204,22 @@
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;Therefore, it is also necessary for us to carry out popular science publicity on the relevant content in the field of synthetic biology, so that more people can have a certain understanding of this field.
                     </p>
-                    <div class="img">
-                        三张图？
+                    <div class="img" style="margin-top: 2vw;">
+                        <img src="../../static/img/education/fig5.png" alt="">
                     </div>
                 </section>
                 <section>
                     <h1>Scientific Tweets</h1>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;After the questionnaire, we designed targeted WeChat scientific tweets, including an introduction to diabetic foot and preventive measures, an introduction to synthetic biology and iGEM, and an introduction to GluLeaves. Until Feb 8th , we have received 335+ views. We plan to upload our project introduction video to the video platform. We look forward to making more interesting Educational attempts in the future, such as going to school to introduce synthetic biology to students and producing more meaningful content.
+                        &nbsp;&nbsp;&nbsp;&nbsp;After the questionnaire, we designed targeted WeChat scientific tweets, including an introduction to diabetic foot and preventive measures, an introduction to synthetic biology and iGEM, and an introduction to GluLeaves. Until Feb 8th , we have received <b>335+ views</b>. We plan to upload our project introduction video to the video platform. We look forward to making more interesting Educational attempts in the future, such as going to school to introduce synthetic biology to students and producing more meaningful content.
                     </p>
-                    <div class="img">
-                        推文长图预览
+                    <div class="img_scroll">
+                        <div class="img_wrap">
+                            <img src="../../static/img/education/tweet.jpg">
+                        </div>
+                    </div>
+                    <div class="des">
+                        Scroll to View the Whole Tweet
                     </div>
                 </section>
                 <section>
@@ -172,11 +227,20 @@
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;We wrote and produced Pamphlets about our project and disease prevention-related publicity pages. To enhance the dissemination of the texts, we tried to use easy-to-understand language so that they could be read and accepted by as many people as possible. In order to have a worldwide impact, we produced a total of eight language versions, including English, Spanish, Japanese, Chinese, Korean, French and Russian. We have attached our flyer here so that you can download it.
                     </p>
-                    <div class="btn">
-                        education 宣传页下载
-                    </div>
-                    <div class="img">
-                        小册子预览图？
+                    <div class="pa_wrap">
+                        <div class="btn" style="font-size: 1.2vw; color: var(--d-green); font-weight: 700;">
+                            Download Pamphlet&nbsp;&nbsp;>
+                        </div>
+                        <ul>
+                            <li><a href="../../static/attachment/Pamphlet/Simpified Chinese.docx" download="Simpified Chinese.docx">CN</a></li>
+                            <li><a href="../../static/attachment/Pamphlet/English.docx" download="English.docx">EN</a></li>
+                            <li><a href="../../static/attachment/Pamphlet/French.docx" download="French.docx">FR</a></li>
+                            <li><a href="../../static/attachment/Pamphlet/German.docx" download="German.docx">DE</a></li>
+                            <li><a href="../../static/attachment/Pamphlet/Japanese.docx" download="Japanese.docx">JP</a></li>
+                            <li><a href="../../static/attachment/Pamphlet/Korean.docx" download="Korean.docx">KR</a></li>
+                            <li><a href="../../static/attachment/Pamphlet/Russian.docx" download="Russian.docx">RU</a></li>
+                            <li><a href="../../static/attachment/Pamphlet/Spanish.docx" download="Spanish.docx">ES</a></li>
+                        </ul>
                     </div>
                 </section>
             </div>
@@ -213,4 +277,16 @@
         </footer>
     </body>
     <script src="../../static/js/basic.js"></script>
+    <script>
+        // download Pamphlet
+        const pa_dl_btn = document.querySelector('.pa_wrap .btn');
+        const lans = document.querySelector('.pa_wrap ul');
+        pa_dl_btn.onclick = () => {
+            if(lans.classList.contains('show')) {
+                lans.classList.remove('show');
+            } else {
+                lans.classList.add('show');
+            }
+        }
+    </script>
 </html>

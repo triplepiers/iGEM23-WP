@@ -46,3 +46,14 @@
         opacity: 1;
     }
 }
+.body .content .btn {
+    width: fit-content;
+    border: 2px solid var(--d-green);
+    padding: 1vw;
+}
+.body .content .btn a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2vw;
+    color: var(--d-green);
+}
