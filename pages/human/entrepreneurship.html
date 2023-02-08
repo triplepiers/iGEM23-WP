@@ -13,6 +13,54 @@
         :root {
             --banner: url('../../static/img/design/banner.png');
         }
+        ul.overview_list {
+            display: flex;
+            padding: 0 5vw;
+            gap: 5vw;
+        }
+        ul.overview_list li {
+            font-size: 1.5vw;
+            width: 50%;
+        }
+        .card_wrap {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3vw;
+        }
+        .card_wrap .row {
+            display: flex;
+            gap: 2vw;
+            
+        }
+        .card_wrap .row .card {
+            padding: 2vw;
+            width: 50%;
+            border-radius: 1vw;
+            padding: 2.5vw 2vw;
+            background-color: var(--l-green);
+            font-size: 1.5vw;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .card_wrap .row .card::after {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2vw;
+            content: attr(idx);
+            position: absolute;
+            top: -1.5vw;
+            left: -1.5vw;
+            color: var(--d-green);
+            width: 4vw;
+            height: 4vw;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
     <body>
         <!-- 顶栏 -->
@@ -93,21 +141,23 @@
                 <section>
                     <h1>Overview</h1>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;GluLeaves has designed <strong>a therapeutic solution for diabetic foot hydrogels based on modified Rhizobium</strong>, we have used synthetic biology to design a therapeutic dressing and a wrap-around brace on the foot where the condition is prevalent, which not only creates excellent conditions for wound healing but also helps patients to understand the condition of their wounds.
+                        &nbsp;&nbsp;&nbsp;&nbsp;GluLeaves has designed <b>a therapeutic solution for diabetic foot hydrogels based on modified Rhizobium</b>, we have used synthetic biology to design a therapeutic dressing and a wrap-around brace on the foot where the condition is prevalent, which not only creates excellent conditions for wound healing but also helps patients to understand the condition of their wounds.
+                    </p>
+                    <p style="padding-top: 2vw;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>The main advantages and functions of our product are:</b> 
+                    <p>
+                        <ul class="overview_list">
+                            <li>
+                                (i) the introduction of harmless modified microorganisms for the slow and smooth release of therapeutic molecules; 
+                            </li>
+                            <li>
+                                (ii) the reporting of wound infections, offering the possibility of early medical attention.
+                            </li>
+                        </ul>
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<i>The main advantages and functions of our product are:</i> 
-                    <ul>
-                        <li>
-                            <i>(i)</i> the introduction of harmless modified microorganisms for the slow and smooth release of therapeutic molecules; 
-                        </li>
-                        <li>
-                            <i>(ii)</i> the reporting of wound infections, offering the possibility of early medical attention.
-                            <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;To have a greater impact on the world, as a part of supporting Entrepreneurship, we plan on applying for patent and building a startup to market our therapeutic.
-                            </p>
-                        </li>
-                    </ul>
+                        &nbsp;&nbsp;&nbsp;&nbsp;To have a greater impact on the world, as a part of supporting Entrepreneurship, we plan on applying for patent and building a startup to market our therapeutic.
+                    </p>
                 </section>
                 <section>
                     <h1>
@@ -116,39 +166,43 @@
                     </h1>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;Diabetes is a common chronic metabolic disorder and diabetic wound healing is an extremely complex physiological process for which there is still no ideal treatment option. The number of people with diabetes in China has reached 
-                        <strong>over 100 million</strong>,
-                        and around <strong>25%</strong> of all diabetics are affected by the diabetic foot.
-                        Studies have shown that in over two-thirds (<strong>84%</strong>) of non-traumatic lower limb amputations due to diabetic foot, the patient will have developed an ulcer in the early stages.
-                        This suggests that the diabetic foot is a condition that <strong>needs to be addressed urgently</strong>.
+                        <b>over 100 million</b>,
+                        and around <b>25%</b> of all diabetics are affected by the diabetic foot.
+                        Studies have shown that in over two-thirds (<b>84%</b>) of non-traumatic lower limb amputations due to diabetic foot, the patient will have developed an ulcer in the early stages.
+                        This suggests that the diabetic foot is a condition that <b>needs to be addressed urgently</b>.
                         <a href="#" target="_top">Please see our background page for details of this section.</a>
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>Our vision</strong> is to establish ourselves as <strong>a promising and profitable business</strong> by offering synthetic biology solutions in the treatment of the diabetic foot. Helping people with early diabetic foot ulcers is a goal we adhere to and we want to provide them with <strong>safe, effective and affordable</strong> treatments.
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Our vision</b> is to establish ourselves as <b>a promising and profitable business</b> by offering synthetic biology solutions in the treatment of the diabetic foot. Helping people with early diabetic foot ulcers is a goal we adhere to and we want to provide them with <b>safe, effective and affordable</b> treatments.
                     </p>
                 </section>
                 <section>
                     <h1>Structure</h1>
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="des">Figure 1 The Structure of our startup</div>
+                    <div class="img" style="width: 80%; margin-left: 10%;">
+                        <img src="../../static/img/entrepreneur/fig1.png" >
+                        <div class="des">Figure 1: The Structure of our startup</div>
                     </div>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;We intend to adopt a flat organisational structure and set up four departments: R&D, Marketing, Operations and Finance.
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>R&D Department:</strong>Responsible for the implementation, improvement and optimisation of the initial concept, interface with external platforms and timely product iteration in accordance with customer requirements.
+                        <b>R&D Department:</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Responsible for the implementation, improvement and optimisation of the initial concept, interface with external platforms and timely product iteration in accordance with customer requirements.
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>Marketing Department:</strong>Responsible for brand image building, product pricing and marketing promotion.
+                        <b>Marketing Department:</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Responsible for brand image building, product pricing and marketing promotion.
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>Operations Department:</strong>Mainly responsible for personnel management and strategic planning, guiding all departments in business planning and co-ordination.
+                        <b>Operations Department:</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Mainly responsible for personnel management and strategic planning, guiding all departments in business planning and co-ordination.
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>Finance Department:</strong>Mainly responsible for the handling of finances as well as providing guidance on the production service strategy based on the operation and cash flow perspective .
+                        <b>Finance Department:</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Mainly responsible for the handling of finances as well as providing guidance on the production service strategy based on the operation and cash flow perspective .
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;As the business expands and grows in size, the number of staff and departmental structures will continue to increase and there will be <strong>a shift from a flat organizational structure to a functional organizational structure</strong>.
+                        &nbsp;&nbsp;&nbsp;&nbsp;As the business expands and grows in size, the number of staff and departmental structures will continue to increase and there will be <b>a shift from a flat organizational structure to a functional organizational structure</b>.
                     </p>
                 </section>
                 <section>
@@ -157,7 +211,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;As a common complication of poorly controlled diabetes, the diabetic foot ulcer forms when the skin tissue breaks down and exposes the underlying layer. It is usually located on the bottom of the foot. The main causes of diabetic ulcers include hyperglycaemia, nerve damage and irritation or injury to the foot. An analysis of global data on diabetes and the diabetic foot can be found in <a href="#" target="_top">the Understanding section</a>.
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Due to the COVID-19 pandemic, the global diabetic foot ulcer (DFU) treatment market is estimated at $4,786.5 million in 2021 and is projected to be <strong>$7,376.5 million</strong> adjusted by 2028, growing at <strong>a CAGR of 6.4%</strong> during the review period 2022-2028.
+                        &nbsp;&nbsp;&nbsp;&nbsp;Due to the COVID-19 pandemic, the global diabetic foot ulcer (DFU) treatment market is estimated at $4,786.5 million in 2021 and is projected to be <b>$7,376.5 million</b> adjusted by 2028, growing at <b>a CAGR of 6.4%</b> during the review period 2022-2028.
                     </p>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;Growing population affected by diabetes and subsequent increase in the number of people suffering from diabetic foot ulcers is likely to have a positive impact on the global diabetic foot ulcer treatment market during the forecast period.
@@ -169,13 +223,13 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;North America is the largest consumer, with a consumption market share of nearly 39.34% in 2021. Europe is the second largest consumer after North America with a consumption market share of 32.5%.
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;The DFU treatment market is highly competitive. The main products currently available in the market are wound care dressings, biologics, therapeutic devices, antibiotic drugs, etc. 3M, Smith & Nephew, Molnlycke Health Care, ConvaTec, Organogenesis, etc. are industry leaders <strong>with high-end customers</strong>. In terms of diabetic foot ulcer (DFU) treatment revenue in 2021, the top five manufacturers account for <strong>53.9%</strong> of the market share.
+                        &nbsp;&nbsp;&nbsp;&nbsp;The DFU treatment market is highly competitive. The main products currently available in the market are wound care dressings, biologics, therapeutic devices, antibiotic drugs, etc. 3M, Smith & Nephew, Molnlycke Health Care, ConvaTec, Organogenesis, etc. are industry leaders <b>with high-end customers</b>. In terms of diabetic foot ulcer (DFU) treatment revenue in 2021, the top five manufacturers account for <b>53.9%</b> of the market share.
                     </p>
                     <div class="img">
                         three pics?
                     </div>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Considering the current state of the market, and the statistics on the global trend of diabetes, Gluleaves plans to control costs as much as possible to achieve <strong>affordable, effective and safe</strong> treatment options. 
+                        &nbsp;&nbsp;&nbsp;&nbsp;Considering the current state of the market, and the statistics on the global trend of diabetes, Gluleaves plans to control costs as much as possible to achieve <b>affordable, effective and safe</b> treatment options. 
                     </p>
                 </section>
                 <section>
@@ -185,26 +239,37 @@
                 <section>
                     <h1>Risk Assessment</h1>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Starting a business involves a certain amount of risk. Risk <strong>assessment and management</strong> is a must for good businesses. Gluleaves should analyze the risk situation in detail in order to take feasible measures to avoid it in the future.
+                        &nbsp;&nbsp;&nbsp;&nbsp;Starting a business involves a certain amount of risk. Risk <b>assessment and management</b> is a must for good businesses. Gluleaves should analyze the risk situation in detail in order to take feasible measures to avoid it in the future.
                     </p>
                     <div class="img">
                     风险评估 pic
                     </div>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;When project decisions are made and the losses caused by risks cannot be offset by the profits gained, we usually use the following measures to avoid risks.<br>
-                        <ul>
-                            <li>1. implementing a bottom-up, multi-level management and monitoring financial management system to try to stop risks at their source before they occur.</li>
-                            <li>2. abandoning collaborative projects that could clearly lead to losses.</li>
-                            <li>3. stopping development of new product features decisively if market problems or critical technical flaws are identified during the development phase.</li>
-                            <li>4. only cooperate with companies that have a large volume and a good reputation.</li>
-                        </ul>
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;For risks with smaller losses, when the enterprise has sufficient financial resources and ability to bear the risk losses, we adopts risk sharing and risk self-insurance to absorb the risk losses by ourselves. As production and operation proceeds, <strong>risk funds</strong>, such as reserves for bad debts and provisions for the fall in value of inventories, are prepared in a planned manner and within reasonable limits. At the same time, <strong>product features must be further optimised to create more value</strong>, improve the core competitiveness of the product and prepare for avoiding further risks.
+                        <div class="card_wrap">
+                            <div class="row">
+                                <div class="card" idx="1">
+                                    Implementing a bottom-up, multi-level management and monitoring financial management system to try to stop risks at their source before they occur.
+                                </div>
+                                <div class="card" idx="2">
+                                    Abandoning collaborative projects that could clearly lead to losses.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card" idx="3">
+                                    Stopping development of new product features decisively if market problems or critical technical flaws are identified during the development phase.
+                                </div>
+                                <div class="card" idx="4">
+                                    Only cooperate with companies that have a large volume and a good reputation.
+                                </div>
+                            </div>
+                        </div>
                     </p>
-                </section>
-                <section>
-                    <h1>Product Validation</h1>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;For risks with smaller losses, when the enterprise has sufficient financial resources and ability to bear the risk losses, we adopts risk sharing and risk self-insurance to absorb the risk losses by ourselves. As production and operation proceeds, <b>risk funds</b>, such as reserves for bad debts and provisions for the fall in value of inventories, are prepared in a planned manner and within reasonable limits. At the same time, <b>product features must be further optimised to create more value</b>, improve the core competitiveness of the product and prepare for avoiding further risks.
+                    </p>
                 </section>
                 <section>
                     <h1>
@@ -215,10 +280,10 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;The domestic medical-grade hydrogel market currently has broad prospects and is shining in the pharmaceutical field. However, the combination of hydrogel and synthetic biology is rare till now. On one hand, due to the integration of synthetic biology into hydrogel dressings, its safety and effectiveness need to be verified, on the other hand, patent issues in the combination of technologies need to be considered.
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Therefore, we hope to do our best to promote and contribute to the field of the combination of hydrogel and synthetic biology. And at the same time <strong>clarifying the scope of intellectual property rights, establishing an effective intellectual property operation environment and institutional settings</strong> so that we will avoid difficulties causing by intellectual property problems in the future.
+                        &nbsp;&nbsp;&nbsp;&nbsp;Therefore, we hope to do our best to promote and contribute to the field of the combination of hydrogel and synthetic biology. And at the same time <b>clarifying the scope of intellectual property rights, establishing an effective intellectual property operation environment and institutional settings</b> so that we will avoid difficulties causing by intellectual property problems in the future.
                     </p>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;To this, we will <strong>consult relevant professionals</strong> to apply for a concept patent as soon as possible. If it is possible, we plan to apply for an invention patent and a utility patent for our engineered C. reinhardti and the whole product respectively. In the longer term, as the promotion of product development and approaching time to the market, the number of patent layouts around product-related components, devices, materials and other fields will increase, and eventually we will achieve the protection of product innovation and competitive advantage through <strong>patent portfolios</strong>.
+                        &nbsp;&nbsp;&nbsp;&nbsp;To this, we will <b>consult relevant professionals</b> to apply for a concept patent as soon as possible. If it is possible, we plan to apply for an invention patent and a utility patent for our engineered C. reinhardti and the whole product respectively. In the longer term, as the promotion of product development and approaching time to the market, the number of patent layouts around product-related components, devices, materials and other fields will increase, and eventually we will achieve the protection of product innovation and competitive advantage through <b>patent portfolios</b>.
                     </p>
                 </section>
                 <section>
@@ -250,35 +315,38 @@
                     <section>
                         <h2>Pricing Strategy</h2>
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;(1) <strong>In the early stage</strong>, market-skimming pricing is used to capture a large amount of profit in a relatively short period of time by virtue of the product's unique technological advantage and novelty, so as to provide sufficient capital for the development in the middle and later stages.
+                            &nbsp;&nbsp;&nbsp;&nbsp;(1) <b>In the early stage</b>, market-skimming pricing is used to capture a large amount of profit in a relatively short period of time by virtue of the product's unique technological advantage and novelty, so as to provide sufficient capital for the development in the middle and later stages.
                         </p>
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;(2) <strong>In the formative stage</strong>, satisfactory pricing is used to capture as much market share as possible.
+                            &nbsp;&nbsp;&nbsp;&nbsp;(2) <b>In the formative stage</b>, satisfactory pricing is used to capture as much market share as possible.
                         </p>
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;(3) <strong>In the mature stage</strong>, the company has already achieved a certain market position and has certain bargaining power, and follows the profit maximisation principle in pricing.
+                            &nbsp;&nbsp;&nbsp;&nbsp;(3) <b>In the mature stage</b>, the company has already achieved a certain market position and has certain bargaining power, and follows the profit maximisation principle in pricing.
                         </p>
                     </section>
                     <section>
                         <h2>Future Plan</h2>
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;According to our estimates, if we can add sensors and a line of hydrogels at a later stage, our costs can be <strong>less than $56</strong>. In addition, the foot hardware meets the criteria for sustainable use by simply replacing the gel dressing. We will try to reduce the cost of the gel dressing and introduce a combination of sets suitable for the treatment steps to be sold to ensure the affordability of this treatment option.
+                            &nbsp;&nbsp;&nbsp;&nbsp;According to our estimates, if we can add sensors and a line of hydrogels at a later stage, our costs can be <b>less than $56</b>. In addition, the foot hardware meets the criteria for sustainable use by simply replacing the gel dressing. We will try to reduce the cost of the gel dressing and introduce a combination of sets suitable for the treatment steps to be sold to ensure the affordability of this treatment option.
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Targets</h1>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Our business is committed to contributing to the advancement of the synthetic biology industry. We cite the relationship map of key interventions for the future development of engineering biology in the UK as our business blueprint, which aims to continue to breathe life into synthetic biology businesses.
                         </p>
                         <div class="img">
-                            <img src="" alt="">
+                            <img src="../../static/img/entrepreneur/blueprint.jpg" alt="">
                         </div>
-                        <p>
+                        <p style="margin-top:0;">
                             &nbsp;&nbsp;&nbsp;&nbsp;In April 2022, researchers from the European Molecular Biology Organisation (EMBO) published a review article in Nature Communications, Bottlenecks and opportunities for synthetic biology biosafety standards biosafety standards), suggesting that biosafety standardisation needs to be supported in order to facilitate the flourishing of synthetic biology.
                         </p>
                         <p>
                             &nbsp;&nbsp;&nbsp;&nbsp;The lack of innovative biosafety standards for synthetic biology is not only an unresolved policy gap, but also limits many potential applications of synthetic biology.
                         </p>
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;Therefore, as we expand the influence of synthetic biology, we will actively <strong>seek dialogue opportunities with governments</strong> to seek to accelerate the process of <strong>developing biosafety standards</strong> for synthetic biology and contribute to the upstream and downstream of the synthetic biology industry.
+                            &nbsp;&nbsp;&nbsp;&nbsp;Therefore, as we expand the influence of synthetic biology, we will actively <b>seek dialogue opportunities with governments</b> to seek to accelerate the process of <b>developing biosafety standards</b> for synthetic biology and contribute to the upstream and downstream of the synthetic biology industry.
                         </p>
-                        <div class="img">
-                            <img src="" alt="">
-                        </div>
                     </section>
                     <section class="ref">
                         <h1>REFERENCES</h1>
@@ -291,23 +359,19 @@
                         </ul>
                     </section>
                 </section>
-                <section>
-                    <h1>Targets</h1>
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Our business is committed to contributing to the advancement of the synthetic biology industry. We cite the relationship map of key interventions for the future development of engineering biology in the UK as our business blueprint, which aims to continue to breathe life into synthetic biology businesses.
-                    </p>
-                </section>
             </div>
         </div>
 
         <div class="menu">
             <div class="t1">Overview</div>
-            <div class="t1">Objective of the Start-Up</div>
+            <div class="t1">
+                Objective of the<br>
+                Start-Up
+            </div>
             <div class="t1">Structure</div>
             <div class="t1">Market Analysis</div>
             <div class="t1">SWOT Analysis</div>
             <div class="t1">Risk Assessment</div>
-            <div class="t1">Product Validation</div>
             <div class="t1">
                 Feasibility:</br>
                 Patent and Approvals
