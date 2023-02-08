@@ -13,7 +13,7 @@
     width: 5px;
     background-color: var(--d-green);
     position: absolute;
-    left: 13px;
+    left: 45px;
     top: 30px;
 }
 .menu .t1:hover {
@@ -26,7 +26,7 @@
 .menu .t1 .t2 {
     display: none;
     opacity: 0;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     font-weight: 500;
     padding-left: 3vw;
     padding-top: 1vw;
