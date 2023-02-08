@@ -6,7 +6,14 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <link rel="stylesheet" href="../../static/css/basic.css">
+        <link rel="stylesheet" href="../../static/css/pages.css">
+        <link rel="stylesheet" href="../../static/css/page_plus.css">
     </head>
+    <style>
+        :root {
+            --banner: url('../../static/img/design/banner.png');
+        }
+    </style>
     <body>
         <!-- 顶栏 -->
         <div class="top_bar">
@@ -70,7 +77,55 @@
                 </div>
             </div>
         </div>
+
+        <div class="banner_wrap">
+            <div class="top">
+                <img src="../../static/img/index/sec1_top.png" alt="">
+            </div>
+            <div class="title_wrap">
+                <div class="title" title="Intergrated Human Practices">Intergrated<br>Human Practices</div>
+                </div>
+            </div>
+        </div>
         
+        <div class="body">
+            <div class="menu_back"></div>
+            <div class="content">
+                <section>
+                    <h1>Introduction</h1>
+                </section>
+                <section>
+                    <h1>Detailed Overview</h1>
+                    <section>
+                        <h2>Understanding (Background)</h2>
+                    </section>
+                    <section>
+                        <h2>Stakeholder Map</h2>
+                    </section>
+                    <section>
+                        <h2>Ideating</h2>
+                    </section>
+                    <section>
+                        <h2>Spreading Awareness</h2>
+                    </section>
+                </section>
+                <section>
+                    <h1>Conclusion</h1>
+                </section>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="t1">Introduction</div>
+            <div class="t1">Detailed Overview
+                <div class="t2">Timeline</div>
+                <div class="t2">Understanding(Background)</div>
+                <div class="t2">Stakeholder Map</div>
+                <div class="t2">Ideating</div>
+                <div class="t2">Spreading Awareness</div>
+            </div>
+            <div class="t1">Conclusion</div>
+        </div>
 
         <!-- 底栏 -->
         <footer id="footer">
@@ -95,29 +150,15 @@
             </div>
         </footer>
     </body>
+    <script src="../../static/js/basic.js"></script>
     <script>
-        // 菜单展开
-        const menu_btn = document.getElementById('menu');
-        menu_btn.onclick = () => {
-            if(menu_btn.classList.contains('active')) {
-                menu_btn.classList.remove('active');
-            } else {
-                menu_btn.classList.add('active');
-            }
+        const t1 = document.querySelectorAll('.t1');
+        const clear_t1 = () => {
+            t1.forEach(item => item.classList.remove('selected'));
         }
-        // scroll reveal
-        // const revealElements = document.querySelectorAll('[data-reveal]');
-        // const scrollReveal = function() {
-        //     len = revealElements.length;
-        //     for(var i = 0; i < len; i++) {
-        //         const isOnScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight;
-        //         if(isOnScreen) {
-        //             revealElements[i].classList.add('show');
-        //         } else {
-        //             revealElements[i].classList.remove('show');
-        //         }
-        //     }
-        // }
-        // window.addEventListener("scroll", scrollReveal);
+        t1.forEach(item => item.addEventListener('click', () => {
+            clear_t1();
+            item.classList.add('selected');
+        }))
     </script>
 </html>
