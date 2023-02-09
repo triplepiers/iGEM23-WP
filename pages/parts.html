@@ -6,7 +6,14 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <link rel="stylesheet" href="../../static/css/basic.css">
+        <link rel="stylesheet" href="../../static/css/pages.css">
+        <link rel="stylesheet" href="../../static/css/page_plus.css">
     </head>
+    <style>
+        :root {
+            --banner: url('../../static/img/integrated/banner.png');
+        }
+    </style>
     <body>
         <!-- 顶栏 -->
         <div class="top_bar">
@@ -35,13 +42,7 @@
                     </ul>
                 </div>
                 <div id="parts" class="menu_item">
-                    <div class="title">Parts<ion-icon name="chevron-down-sharp"></ion-icon></div>
-                    <ul class="choice">
-                        <li><a href="./collection.html" target="_top">Part Collection</a></li>
-                        <li><a href="#" target="_top">New Parts</a></li>
-                        <li><a href="./measurement.html" target="_top">Measurement</a></li>
-                        <li><a href="./improvement.html" target="_top">Improvement</a></li>
-                    </ul>
+                    <div class="title"><a href="../pages/parts.html" target="_top">Parts</a></div>
                 </div>
                 <div id="experiments" class="menu_item">
                     <div class="title">Experiments<ion-icon name="chevron-down-sharp"></ion-icon></div>
@@ -69,6 +70,52 @@
             </div>
         </div>
         
+        <div class="banner_wrap">
+            <div class="top">
+                <img src="../../static/img/index/sec1_top.png" alt="">
+            </div>
+            <div class="title_wrap">
+                <div class="title" title="Parts">Parts</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="menu_back"></div>
+            <div class="content">
+                <section>
+                    <h1>
+                        Treatment<br>
+                        Module
+                    </h1>
+                </section>
+                <section>
+                    <h1>
+                        Infection Report<br>
+                        Module
+                    </h1>
+                </section>
+                <section>
+                    <h1>
+                        Quorum Sensing<br>
+                        Module
+                    </h1>
+                </section>
+                <section>
+                    <h1>
+                        Biosafety<br>
+                        Module
+                    </h1>
+                </section>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="t1">Treatment Module</div>
+            <div class="t1">Infection Report Module</div>
+            <div class="t1">Quorum Sensing Module</div>
+            <div class="t1">Biosafety Module</div>
+        </div>
 
         <!-- 底栏 -->
         <footer id="footer">
@@ -93,29 +140,5 @@
             </div>
         </footer>
     </body>
-    <script>
-        // 菜单展开
-        const menu_btn = document.getElementById('menu');
-        menu_btn.onclick = () => {
-            if(menu_btn.classList.contains('active')) {
-                menu_btn.classList.remove('active');
-            } else {
-                menu_btn.classList.add('active');
-            }
-        }
-        // scroll reveal
-        // const revealElements = document.querySelectorAll('[data-reveal]');
-        // const scrollReveal = function() {
-        //     len = revealElements.length;
-        //     for(var i = 0; i < len; i++) {
-        //         const isOnScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight;
-        //         if(isOnScreen) {
-        //             revealElements[i].classList.add('show');
-        //         } else {
-        //             revealElements[i].classList.remove('show');
-        //         }
-        //     }
-        // }
-        // window.addEventListener("scroll", scrollReveal);
-    </script>
+    <script src="../../static/js/basic.js"></script>
 </html>
