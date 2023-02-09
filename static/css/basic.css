@@ -274,10 +274,6 @@ body {
         padding-left: 10px;
         
     }
-    /* 针对没有展开列表得中间项进行的优化 */
-    .top_bar .menu_item:nth-child(3){
-        padding-bottom: 20px;
-    }
     .top_bar .menu_wrap .menu_item .choice {
         border-radius: 5px;
         box-shadow: 0 0 15px #6CC3A4;
