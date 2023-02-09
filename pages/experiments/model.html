@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>New Parts | iGem Winter Program</title>
+        <title>Model | iGem Winter Program</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <link rel="stylesheet" href="../../static/css/basic.css">
+        <link rel="stylesheet" href="../../static/css/pages.css">
+        <link rel="stylesheet" href="../../static/css/page_plus.css">
+        <link rel="stylesheet" href="../../static/css/table.css">
     </head>
+    <style>
+        :root {
+            --banner: url('../../static/img/model/banner.png');
+        }
+        ul.norm {
+            padding-left: 4vw;
+            font-size: 1.5vw;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            gap: .5vw;
+        }
+        ul.math {
+            line-height: 2.5vw;
+            gap: 1.5vw;
+        }
+        ul.norm li,
+        ul.math li {
+            list-style: circle;
+        }
+        
+        table.outer {
+            margin-top: 2vw;
+        }
+        tr, td {
+            font-size: 1vw;
+        }
+        tr.sub td {
+            font-size: 1.5vw;
+            text-align: left;
+            padding-left: 2vw;
+            padding-bottom: .6vw;
+            color: var(--d-green);
+            border-bottom: 2px solid var(--d-green);
+        }
+        table.nested tr {
+            border: none;
+        }
+        table.nested td {
+            padding: 0;
+            padding-top: 1vw;
+        }
+        table.nested td:first-child {
+            width: 10vw;
+        }
+        .theorem{
+            margin-top: 2vw;
+            width: 90%;
+            margin-left: 5%;
+            background-color: var(--l-green);
+            border-radius: 1vw;
+            overflow: hidden;
+        }
+        .theorem .title {
+            font-size: 2vw;
+            padding: .5vw 2vw ;
+            width: 100%;
+            color: #fff;
+            background-color: var(--dd-green);
+        }
+        .theorem .content {
+            width: 100%;
+            font-size: 1.5vw;
+            color: var(--dd-green);
+            display: flex;
+            flex-direction: column;
+            gap: .5vw;
+            padding:0;
+        }
+        .theorem .content .math {
+            margin: 0;
+        }
+        .theorem .content .word {
+            width: 100%;
+            text-align: center;
+            padding: 1vw 2vw;
+        }
+        .theorem .content .word.l {
+            text-align: left;
+        }
+        .theorem .content .word.s {
+            text-indent: 2vw;
+        }
+        .math {
+            font-size: 1.5vw;
+            color: var(--dd-green);
+            margin-top: 2vw;
+        }
+    </style>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <body>
         <!-- 顶栏 -->
         <div class="top_bar">
@@ -63,27 +166,27 @@
             </div>
         </div>
          
-        <div class="banner">
-            this is model
-            大概是 banner 的位置？
+        <div class="banner_wrap">
+            <div class="top">
+                <img src="../../static/img/index/sec1_top.png" alt="">
+            </div>
+            <div class="title_wrap">
+                <div class="title" title="Model">Model</div>
+                </div>
+            </div>
         </div>
+
         <div class="body">
-            <div class="menu"></div>
+            <div class="menu_back"></div>
             <div class="content">
                 <section>
                     <h1>Introduction</h1>
-                    <section>
-                        <h2>Background</h2>
-                        <div class="img-wrap">
-                            <img src="" alt="">
-                        </div>
-                    </section>
-                    <section>
+                    <section class="s2">
                         <h2>Contribution</h2>
                         <p>
                             The main issues and contributions of what should be done for a Modelers as follows:
                         </p>
-                       <ul>
+                       <ul class="norm">
                             <li>Contribution 1: Process Mathematical Modeling(MAIN)</li>
                             <li>Contribution 2: Error Analysis and Correction Guidance</li>
                             <li>Contribution 3: Stability and Robustness Analysis</li>
@@ -92,28 +195,74 @@
                 </section>
                 <section>
                     <h1>Model I: Chassis</h1>
-                    <section>
+                    <section class="s2">
                         <h2>Notations & Assumptions</h2>
                         <p>The notations of the parameters and variables are given as follows:</p>
-                        <div class="img-wrap">
-                            <img src="" alt="">
-                            <div class="des">Table: Parameters and variables.</div>
-                        </div>
+                        <table class="outer">
+                            <caption>Parameters and variables</caption>
+                            <tr class="sub">
+                                <td>Parameters</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table class="nested">
+                                        <tr>
+                                            <td>$N_0$</td>
+                                            <td>The population size at the time of zero</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$N_{max}$</td>
+                                            <td>Limitation of the population size that the environment sustain</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$r$</td>
+                                            <td>The possible max relative growth speed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$C_i$</td>
+                                            <td>Proportionality factors</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="sub">
+                                <td>Variables</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table class="nested">
+                                        <tr>
+                                            <td>$N$</td>
+                                            <td>The current population size</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$t$</td>
+                                            <td>Time</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$P$</td>
+                                            <td>Product</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$S$</td>
+                                            <td>Activated cell number</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
                     </section>
                     <section>
                         <h2>Overall Explanations of the Model</h2>
-                        <p>According to microbic growth process</p>
-                        <ul>
-                            <li>Algae Growth Dynamics
-                                <ul>
-                                    <li>Growth and Stationary</li>
-                                    <li>Dying(Apoptosis)</li>
-                                    <li>Biological stability analysis</li>
-                                </ul>
-                            </li>
-                            <li>AGER(Product) Generation Dynamics</li>
-                            <li>Chromoprotein Production and Disease Reporting</li>
+                        <p>According to microbic growth process:</p>
+                        <p><b>- Algae Growth Dynamics</b></p>
+                        <ul class="norm" style="padding-left: 6vw;">
+                            <li>Growth and Stationary</li>
+                            <li>Dying(Apoptosis)</li>
+                            <li>Biological stability analysis</li>
                         </ul>
+                        <p><b>- AGER(Product) Generation Dynamics</b></p>
+                        <p><b>- Chromoprotein Production and Disease Reporting</b></p>
                     </section>
                     <section>
                         <h2>Algae Growth Dynamics</h2>
@@ -123,89 +272,117 @@
                         <p>
                             $N$ denotes the current population size. Let the limitation of the population size that the environment sustain be $N_{max}$. When $N < N_{max}$, the environment can still sustain the growth of population size, and as the population size keeps increasing and approaches $N_{max}$, the inhibitory effect will become more and more obvious. Then, according to the above, $N_{max}-N$ can exactly represent the number of populations that the environment can sustain,$r$ represents the possible max relative growth speed of the algaes, and $t$ represents time.
                         </p>
+                        <div class="theorem">
+                            <div class="title">Theorem (Logistic Model)</div>
+                            <div class="content">
+                                <div class="math">
+                                    \begin{equation}
+                                    \frac{dN}{dt} = r(1-\frac{N}{N_{max}})N
+                                    \end{equation}
+                                </div>
+                                <div class="word">where $N(t)|_{t=0}=N_{0}$ \quad $\mathop{lim}\limits_{t\rightarrow\infty}N(t)=N_{max}$</div>
+                            </div>
+                        </div>
                         <p>
-                            \begin{theorem}[Logistic Model]
-                            \begin{equation}
-                                \frac{dN}{dt} = r(1-\frac{N}{N_{max}})N
-                            \end{equation}
-                            where $N(t)|_{t=0}=N_{0}$ \quad $\mathop{lim}\limits_{t\rightarrow\infty}N(t)=N_{max}$
-                            \end{theorem}
-                            Considering the solution to this OED: \\
-                            \begin{equation}
-                                N(t)=\frac{N_{0}N_{max}}{N_{0}+(N_{max}-N_{0})e^{-rt}}
-                            \end{equation}
+                            Considering the solution to this OED:
                         </p>
+                        <div class="math">
+                            $$
+                                \begin{equation}
+                                    N(t)=\frac{N_{0}N_{max}}{N_{0}+(N_{max}-N_{0})e^{-rt}}
+                                \end{equation}
+                            $$
+                        </div>
+                        <div class="theorem">
+                            <div class="title">Theorem</div>
+                            <div class="content">
+                                <div class="math">
+                                    \begin{equation}
+                                        \frac{1}{N}\frac{dN}{dt} = -D
+                                    \end{equation}
+                                </div>
+                                <div class="word">where $D$ is the ratio of mortality.</div>
+                            </div>
+                        </div>
                         <p>
-                            \begin{frame}
-                            \begin{theorem}
-                            \begin{equation}
-                                \frac{1}{N}\frac{dN}{dt} = -D
-                            \end{equation}
-                            where D is the ratio of mortality.
-                            \end{theorem}
-                            Solving this ODE:\\
-                            \begin{equation}
-                            N(t) = N_{max}e^{-Dt}
-                            \end{equation}
-                            \end{frame}
+                            Solving this ODE:
                         </p>
+                        <div class="math">
+                            $$
+                                \begin{equation}
+                                N(t) = N_{max}e^{-Dt}
+                                \end{equation}
+                            $$
+                        </div>
+                        <section>
+                            <h3>Definition (Autonomous System)</h3>
+                            <p>The differential equation in the following form:</p>
+                            <div class="math">
+                                $$ \frac{dx}{dt} = f(x) $$
+                            </div>
+                            <p>
+                                The differential equation in the following form: $\frac{dx}{dt} = f(x)$
+                                is called autonomous systems, where $f(x)$ does not obviously contain a time variable. Clearly, ‘Logistic Model’ is an autonomous system.
+                            </p>
+                        </section>
+                        <section>
+                            <h3>Definition (Phase Plane)</h3>
+                            <p>
+                                The phase space of the autonomous system $dx = f(x)$ is the dt
+                                space $\mathbb{R}^n$ with ($x1, · · · , xn$) as coordinates.In particular, when $n = 2$, the phase space is called the phase plane. The set of points ${(x1, · · · , xn)}|xi = xi(t)$ in the space $\mathbb{R}^n$ satisfies 
+                                $dx = f(x)$, (where $i = 1,··· ,n$) called the track line of the dt
+                                system.The distribution of all track lines in phase space is called phase diagram.  
+                            </p>
+                        </section>
+                        <section>
+                            <h3>Definition (Stability Determination:Lyapunov)</h3>
+                            <p>
+                                Let $x_{0}$ be the equilibrium point of $\frac{dx}{dt} = f(x)$:
+                            </p>
+                            <ul class="math norm">
+                                <li>$x_{0}$ is stable for any given $\varepsilon>0$,there exists a $\delta>0$ such that whenever $|x(0)-x_{0}|<\delta$, there is $|x(t)-x_{0}|<\varepsilon$,which holds for all $t$.</li>
+                                <li>$x_{0}$ is asymptotically stable if it is stable and $\mathop{lim}\limits_{t\rightarrow\infty}|x(t)-x_{0}|=0$.</li>
+                                <li>$x_{0}$ is unstable if the first condition above is not satisfied.</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>Definition</h3>
+                            <p>
+                                Let $x^{0}$ be the equilibrium point of the differential equation $\frac{dx}{dt} = f(x)$. If $f'(x^{0}) < 0$, then $x^{0}$ is asymptotically stable; if $f'(x^{0})>0$, then $x^{0}$ is unstable.
+                            </p>
+                        </section>
+                        <section>
+                            <h3>Proof</h3>
+                            <p>
+                                According to Taylor Expansion:
+                            </p>
+                            <div class="math">
+                                $$
+                                    \begin{equation*}
+                                    f(x)=f(x^{0})+f'(x^{0})(x-x^{0})+o(|x-x^{0}|)
+                                    \end{equation*}
+                                $$
+                            </div>
+                            <ul class="math norm">
+                                <li>Because $x^{0}$ is the equilibrium point, so it is obvious that $f(x^{0})=0$.</li>
+                                <li>If $f'(x^{0}) < 0$, when $x < x^{0}$, then $f(x)>0$, $x$ monotonic increase; when $x>x^{0}$, then $f(x) < 0$, $x$ monotonous reduction, all above indicates that $x\rightarrow x^{0}$.</li>
+                                <li>If $f'(x^{0})>0$, similar analysis process.</li>
+                            </ul>
+                        </section>
                         <p>
-                            \begin{frame}
-                            \begin{definition}[Autonomous System]
-                            The differential equation in the following form:
-                            \begin{equation}
-                                \frac{dx}{dt} = f(x)
-                            \end{equation}
-                            is called autonomous systems, where $f(x)$ does not obviously contain a time variable. Clearly, `Logistic Model' is an autonomous system.
-                            \end{definition}
-                            \end{frame}
-                        </p>
-                        <p>
-                            \begin{frame}
-                            \begin{definition}[Phase Plane]
-                            The phase space of the autonomous system $\frac{dx}{dt} = f(x)$ is the space $\mathbb{R}^{n}$ with $(x_{1},\cdots,x_{n})$ as coordinates.In particular, when $n=2$, the phase space is called the phase plane. The set of points $\{(x_{1},\cdots,x_{n})\}|x_{i}=x_{i}(t)$ in the space $\mathbb{R}^{n}$ satisfies $\frac{dx}{dt} = f(x)$, (where $i=1,\cdots,n$)called the track line of the system.The distribution of all track lines in phase space is called phase diagram.
-                            \end{definition}
-                            \end{frame}
-                        </p>
-                        <p>
-                            \begin{frame}
-                            \begin{definition}[Stability Determination:Lyapunov]
-                            Let $x_{0}$ be the equilibrium point of $\frac{dx}{dt} = f(x)$:
-                            \begin{itemize}
-                                \item \small $x_{0}$ is stable for any given $\varepsilon>0$,there exists a $\delta>0$ such that whenever $|x(0)-x_{0}|<\delta$, there is $|x(t)-x_{0}|<\varepsilon$,which holds for all $t$.
-                                \item \small $x_{0}$ is asymptotically stable if it is stable and $\mathop{lim}\limits_{t\rightarrow\infty}|x(t)-x_{0}|=0$.
-                                \item \small $x_{0}$ is unstable if the first condition above is not satisfied.
-                            \end{itemize}
-                            \end{definition}
-                            \begin{definition}
-                            Let $x^{0}$ be the equilibrium point of the differential equation $\frac{dx}{dt} = f(x)$. If $f'(x^{0}) < 0$, then $x^{0}$ is asymptotically stable; if $f'(x^{0})>0$, then $x^{0}$ is unstable.
-                            \end{definition}
-                            \end{frame}
-                        </p>
-                        <p>
-                            \begin{frame}
-                            \begin{proof}
-                            According to Taylor Expansion:
-                            \begin{equation*}
-                                f(x)=f(x^{0})+f'(x^{0})(x-x^{0})+o(|x-x^{0}|)
-                            \end{equation*}
-                                \begin{itemize}
-                                    \item Because $x^{0}$ is the equilibrium point, so it is obvious that $f(x^{0})=0$.
-                                    \item If $f'(x^{0}) < 0$, when $x < x^{0}$, then $f(x)>0$, $x$ monotonic increase; when $x>x^{0}$, then $f(x) < 0$, $x$ monotonous reduction, all above indicates that $x\rightarrow x^{0}$.
-                                    \item If $f'(x^{0})>0$, similar analysis process.
-                                \end{itemize}
                             For Logistic Model:
+                        </p>
+                        <div class="math">
                             \begin{equation*}
                                 f(N) = rN - \frac{rN^{2}}{N_{max}} \qquad
                                 f'(N) = r - 2\frac{rN}{N_{max}}
                             \end{equation*}
+                        </div>
+                        <p>
                             It's obvious when $N=N_{max}$, it is asymptotically stable.
-                            \end{proof}
-                            %What's more, if more accurate, then \cite{fenpifajiaodonglixue}
-                            \end{frame}
                         </p>
-                        <div class="img-wrap">
-                            <img src="" alt="">
+                        <div class="img" style="width:70%;margin-left: 15%;margin-top: 2vw;">
+                            <img src="../../static/img/model/fig1.bmp" alt="">
                             <div class="des">Figure: Model I Fig</div>
                         </div>
                     <section>
@@ -213,28 +390,36 @@
                         <p>
                             Considering algaes growth and product generation as a mixed model, that is, related to both primary and secondary products(related to both cell accumulation and its growth rates).
                         </p>
-                        <p>
-                            \begin{theorem}
-                            \begin{equation}
-                                \frac{dP}{dt} = C_{1}\frac{dN}{dt}+C_{2}N
-                            \end{equation}
-                            where $C_{1}$ and $C_{2}$ are two proportionality factors.
-                            \end{theorem}
-                        </p>
+                        <div class="theorem">
+                            <div class="title">Theorem</div>
+                            <div class="content">
+                                <div class="math">
+                                    \begin{equation}
+                                    \frac{dP}{dt} = C_{1}\frac{dN}{dt}+C_{2}N
+                                    \end{equation}
+                                </div>
+                                <div class="word">where $C_1$ and $C_{2}$ are two proportionality factors.</div>
+                            </div>
+                        </div>
                     </section>
                     <section>
                         <h2>Chromoprotein Production & Disease Reporting</h2>
                         <p>
                             Considering the rate of change of activated cells depends on the cell growth rate, the activated cell number and the amount of cell accumulation.
                         </p>
-                        <p>
-                            \begin{theorem}
-                            \begin{equation}
-                                \frac{dS}{dt} = C_{3}N+C_{4}\frac{dN}{dt}+C_{5} S
-                            \end{equation}
-                            where $C_{3}$,$C_{4}$ and $C_{5}$ are three proportionality factors.
-                            \end{theorem}
-                        </p>
+                        <div class="theorem">
+                            <div class="title">Theorem</div>
+                            <div class="content">
+                                <div class="math">
+                                    \begin{equation}
+                                    \frac{dS}{dt} = C_{3}N+C_{4}\frac{dN}{dt}+C_{5} S
+                                    \end{equation}
+                                </div>
+                                <div class="word">
+                                    where $C_{3}$, $C_{4}$ and $C_{5}$ are three proportionality factors.
+                                </div>
+                            </div>
+                        </div>
                         <p>
                             Under the assumption that the production of chromoprotein is proportional to the number of activated cells, the amount of chromoprotein production can be reflected by the number of activated cells.
                         </p>
@@ -244,57 +429,83 @@
                     <h1>Model II: Hydrogel & Drug</h1>
                     <section>
                         <h2>Hydrogel Phase Transition & Swelling</h2>
-                        <p>
-                            \begin{frame}
-                            \begin{theorem}[Rubber Thermodynamics]
-                            \tiny It describes the phase transition of the hydrogel and the entropy.The force $f$ that deforms the polymer network consists of two components:
-                            \begin{equation}
-                                f = f_{e}+f_{s} =(\frac{\partial U}{\partial L})_{T,V} + T(\frac{\partial f}{\partial T})_{V,L} =(\frac{\partial U}{\partial L})_{T,V} -T(\frac{\partial S}{\partial L})_{T,V}
-                            \end{equation}
-                            \tiny where $U$ is the internal energy, $S$ is the entropy, $L$ is the polymer length dimension, $T$ is the temperature, $V$ is the volume.
-                            \end{theorem}
-
-                            \begin{theorem}[Swelling Equilibrium]
-                            \begin{equation}
-                                q_{m}^{5/3} \cong \frac{V_{0}}{\nu_e}\frac{(\frac{1}{2}-\chi_{1})}{\nu_1}
-                            \end{equation}
-                            \tiny where $q_{m}^{5/3}$ is equilibrium swelling ratio, $V_0$ is volume of unswollen polymer, $\chi_{1}$ is polymer-solvent interaction coefficient, $\nu_e$ is effective number of chain segments in the polymer network, $\nu_1$ is molar volume of solvent molecules.
-                            \end{theorem}
-                            \end{frame}
-                        </p>
+                        <div class="theorem">
+                            <div class="title">Theorem (Rubber Thermodynamics)</div>
+                            <div class="content">
+                                <div class="word l s">
+                                    It describes the phase transition of the hydrogel and the entropy. The force $f$ that deforms the polymer network consists of two components:
+                                </div>
+                                <div class="math">
+                                    \begin{equation}
+                                        f = f_{e}+f_{s} =(\frac{\partial U}{\partial L})_{T,V} + T(\frac{\partial f}{\partial T})_{V,L} =(\frac{\partial U}{\partial L})_{T,V} -T(\frac{\partial S}{\partial L})_{T,V}
+                                    \end{equation}
+                                </div>
+                                <div class="word l">
+                                    where $U$ is the internal energy, $S$ is the entropy, $L$ is the polymer length dimension, $T$ is the temperature, $V$ is the volume.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="theorem">
+                            <div class="title">Theorem (Swelling Equilibrium)</div>
+                            <div class="content">
+                                <div class="math">
+                                    \begin{equation}
+                                        q_{m}^{5/3} \cong \frac{V_{0}}{\nu_e}\frac{(\frac{1}{2}-\chi_{1})}{\nu_1}
+                                    \end{equation}
+                                </div>
+                                <div class="word l">
+                                    where $q_{m}^{5/3}$ is equilibrium swelling ratio, $V_0$ is volume of unswollen polymer, $\chi_{1}$ is polymer-solvent interaction coefficient, $\nu_e$ is effective number of chain segments in the polymer network, $\nu_1$ is molar volume of solvent molecules.
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <section>
                         <h2>Hydrogel Drug Release</h2>
                         <p>
                             The model considers the phenomenon of drug diffusion as well as polymer relaxation, assuming that the drug release is a fast diffusion-controlled phenomenon and subsequently controlled by polymer chain relaxation, and the whole drug release process considers the superposition effect of two components.
                         </p>
-                        <p>
-                            \begin{theorem}[Empirical model I]
-                            \begin{equation}
-                                M_{t} = M_{\infty,F}[1-\frac{6}{\pi^{2}}\mathop{\sum}\limits_{n=1}^{\infty}\frac{1}{n^2}exp(-n^2\frac{4\pi^2D}{d^2}t)] + M_{\infty,R}[1-exp(-k't)]
-                            \end{equation}
-                            \tiny where $M_{t}$ is accumulated amount of drug released at moment $t$,  $D$ is the diffusion coefficient of drug molecules, $d$ is the particle diameter, $M_{\infty,F}$ is the amount of accumulated drug release over an infinite period of time when no relaxation of the polymer occurs, $M_{\infty,R}$ is the total amount of drug release due to relaxation, $k'$ is the relaxation rate constant.
-                            \end{theorem}
-                        </p>
-                        <p>
-                            \begin{theorem}[Empirical model II]
-                            \begin{equation}
-                                \frac{M_{t}}{M_{\infty}} = k'_1 t^n + k'_2 t^{2n}
-                            \end{equation}
-                            \tiny where $k'_1$ and $k'_2$ denote the diffusion and relaxation kinetic constants, respectively.
-                            \end{theorem}
-                        </p>
+                        <div class="theorem">
+                            <div class="title">Theorem (Empirical model I)</div>
+                            <div class="content">
+                                <div class="math">
+                                    \begin{equation}
+                                        M_{t} = M_{\infty,F}[1-\frac{6}{\pi^{2}}\mathop{\sum}\limits_{n=1}^{\infty}\frac{1}{n^2}exp(-n^2\frac{4\pi^2D}{d^2}t)] + M_{\infty,R}[1-exp(-k't)]
+                                    \end{equation}
+                                </div>
+                                <div class="word l">
+                                    where $M_{t}$ is accumulated amount of drug released at moment $t$,  $D$ is the diffusion coefficient of drug molecules, $d$ is the particle diameter, $M_{\infty,F}$ is the amount of accumulated drug release over an infinite period of time when no relaxation of the polymer occurs, $M_{\infty,R}$ is the total amount of drug release due to relaxation, $k'$ is the relaxation rate constant.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="theorem">
+                            <div class="title">Theorem (Empirical model II)</div>
+                            <div class="content">
+                                <div class="math">
+                                    \begin{equation}
+                                        \frac{M_{t}}{M_{\infty}} = k'_1 t^n + k'_2 t^{2n}
+                                    \end{equation}
+                                </div>
+                                <div class="word l">
+                                    where $k'_1$ and $k'_2$ denote the diffusion and relaxation kinetic constants, respectively.
+                                </div>
+                            </div>
+                        </div>
                         <p>
                             It is preferred to use Scaling Law to determine whether this Model is suitable.
                         </p>
-                        <p>
-                            \begin{theorem}[Detailed model]
-                            \begin{equation}
-                                F_{d}(t)=1-(\frac{r_{s}}{r_{0}})^{2}-\frac{(r_{d}^{2}-r_{s}^{2})}{f_{s}r_{0}^{2}}-\frac{2V_{poly}\rho_{poly}M_{d}}{\rho_{w}f_{s}V_{d}\rho_{d}r_{0}^{2}}\int_{r_{d}}^{r_{e}}C_{d}C_{w}rdr
-                            \end{equation}
-                            \tiny where $F_{d}(t)$ is accumulated amount of drug released at moment $t$, $r_s$, $r_0$, $r_d$, $r_e$ denotes matrix dissolution front, original radius, diffusion front, and erosion front, respectively, $f_s$ is matrix expansion coefficient, $V_{poly}$ and $V_d$ denote matrix volume and drug volume, respectively, $\rho_{poly}$, $\rho_w$, $\rho_d$ denotes matrix density, water density, and drug density, respectively, $M_d$ is drug mass fraction, $C_d$, $C_w$ denotes drug concentration and water molecule concentration in the outermost region, respectively.
-                            \end{theorem}
-                        </p>
+                        <div class="theorem">
+                            <div class="title">Theorem (Detailed model)</div>
+                            <div class="content">
+                                <div class="math">
+                                    \begin{equation}
+                                        F_{d}(t)=1-(\frac{r_{s}}{r_{0}})^{2}-\frac{(r_{d}^{2}-r_{s}^{2})}{f_{s}r_{0}^{2}}-\frac{2V_{poly}\rho_{poly}M_{d}}{\rho_{w}f_{s}V_{d}\rho_{d}r_{0}^{2}}\int_{r_{d}}^{r_{e}}C_{d}C_{w}rdr
+                                    \end{equation}
+                                </div>
+                                <div class="word l">
+                                    where $F_{d}(t)$ is accumulated amount of drug released at moment $t$, $r_s$, $r_0$, $r_d$, $r_e$ denotes matrix dissolution front, original radius, diffusion front, and erosion front, respectively, $f_s$ is matrix expansion coefficient, $V_{poly}$ and $V_d$ denote matrix volume and drug volume, respectively, $\rho_{poly}$, $\rho_w$, $\rho_d$ denotes matrix density, water density, and drug density, respectively, $M_d$ is drug mass fraction, $C_d$, $C_w$ denotes drug concentration and water molecule concentration in the outermost region, respectively.
+                                </div>
+                            </div>
+                        </div>
                         <p>
                             It is admitted that much of the data of the detailed model is very difficult to measure.
                         </p>
@@ -304,46 +515,100 @@
                         <p>
                             Kinetic processes are dynamic evolutionary processes that characterize the movement of matter from one equilibrium state to another.
                         </p>
-                        <p>
-                            \begin{theorem}
-                            \tiny Conservation of mass:
-                            \begin{equation}
-                                \nabla \cdot [(\phi^{w})^{2}\nabla p - f_{sw}\boldsymbol{V^{s}}] = 0
-                            \end{equation}
-                            \tiny Conservation of momentum:
-                            \begin{equation}
-                                \nabla \cdot (\boldsymbol{\sigma^{s}} - p \boldsymbol{I}) = 0
-                            \end{equation}
-                            \tiny Pharmacodynamics:
-                            \begin{equation}
-                                \frac{\partial c}{\partial t} + v^{w} \cdot \nabla c = \nabla \cdot (D\nabla c)
-                            \end{equation}
-                            \tiny Constitutive equation:
-                            \begin{equation}
-                                \boldsymbol{\sigma^{s}} = \lambda tr(\boldsymbol{\varepsilon})\boldsymbol{I} + 2\mu \boldsymbol{\varepsilon}
-                            \end{equation}
-                            \end{theorem}
-                        </p>
-                        <p>
+                        <div class="theorem">
+                            <div class="title">Theorem</div>
+                            <div class="content">
+                                <div class="word l">Conservation of mass:</div>
+                                <div class="math">
+                                    \begin{equation}
+                                        \nabla \cdot [(\phi^{w})^{2}\nabla p - f_{sw}\boldsymbol{V^{s}}] = 0
+                                    \end{equation}
+                                </div>
+                                <div class="word l">Conservation of momentum:</div>
+                                <div class="math">
+                                    \begin{equation}
+                                        \nabla \cdot (\boldsymbol{\sigma^{s}} - p \boldsymbol{I}) = 0
+                                    \end{equation}
+                                </div>
+                                <div class="word l">Pharmacodynamics:</div>
+                                <div class="math">
+                                    \begin{equation}
+                                        \frac{\partial c}{\partial t} + v^{w} \cdot \nabla c = \nabla \cdot (D\nabla c)
+                                    \end{equation}
+                                </div>
+                                <div class="word l">Constitutive equation:</div>
+                                <div class="math">
+                                    \begin{equation}
+                                        \boldsymbol{\sigma^{s}} = \lambda tr(\boldsymbol{\varepsilon})\boldsymbol{I} + 2\mu \boldsymbol{\varepsilon}
+                                    \end{equation}
+                                </div>
+                            </div>
+                        </div>
+                        <p style="font-size: 1vw; text-align: center;">
                             Cheng et al. [2011] Chiu and Radisic [2011] Killion et al. [2011] Parimala and Sudha [2012]
                         </p>
-                        <div class="img-wrap">
-                            <img src="" alt="">
+                        <div class="img" style="width:70%;margin-left: 15%;margin-top: 2vw;">
+                            <img src="../../static/img/model/fig2.jpg" alt="">
                             <div class="des">Figure: Model II Fig</div>
                         </div>
                     </section>
                 </section>
                 <section>
                     <h1>Model III: Drug Absorption</h1>
-                    <section>
+                    <section class="s2">
                         <h2>Notations & Assumptions</h2>
                         <p>
                             The notations of the parameters and variables are given as follows:
                         </p>
-                        <div class="table">
-                            <div class="des">Table: Parameters and variables.</div>
-                            <img src="" alt="">
-                        </div>
+                        <table class="outer">
+                            <caption>Parameters and variables</caption>
+                            <tr class="sub">
+                                <td>Parameters</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table class="nested">
+                                        <tr>
+                                            <td>$k_i$</td>
+                                            <td>Proportionality factor</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$R$</td>
+                                            <td>The total amount of drug entering the body</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$V$</td>
+                                            <td>Volume of blood</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="sub">
+                                <td>Variables</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table class="nested">
+                                        <tr>
+                                            <td>$x(t)$</td>
+                                            <td>Total amount of drugs in the body at time $t$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$y(t)$</td>
+                                            <td>The amount of drug remaining at moment $t$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$t$</td>
+                                            <td>Time</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$C(t)$</td>
+                                            <td>Drug concentration in the blood</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
                     </section>
                     <section>
                         <h2>Pharmacodynamics</h2>
@@ -352,22 +617,29 @@
                         </p>
                         <p>
                             After application, the drug is generally concentrated on a certain part of the body and is gradually absorbed by the contact between its surface and the muscle. Let the rate at which the drug is absorbed be proportional to the amount of the stock drug, and note the proportionality factor as $k_{1}$. That is, if the amount of drug remaining at moment $t$ is noted as $y(t)$, then $y$ satisfies:
-                            \end{itemize}
+                        </p>
+                        <div class="math">
                             \begin{equation}
                                 \frac{dy}{dt} = -k_{1}y
                             \end{equation}
-                            \qquad where $y(0) = R$, represents the total amount of drug entering the body.
-                        </p>
+                        </div>
+                        <p style="text-align: center;">where $y(0) = R$, represents the total amount of drug entering the body.</p>
                         <p>
                             Single-compartment model of drug distribution: Assume that the drug in the body is uniformly distributed at any moment, and let the total amount of drug in moment $t$ be $x(t)$; the system is in a dynamic equilibrium, the following relationship is assumed:
+                        </p>
+                        <div class="math">
                             \begin{equation}
                                 \frac{dx}{dt} = (\frac{dx}{dt})_{in} - (\frac{dx}{dt})_{out}
                             \end{equation}
+                        </div>
+                        <p>
                             The rate of drug breakdown and excretion is usually considered to be proportional to the current concentration of the drug (note the proportionality factor as $k_{2}$), which is usually considered $(\frac{dx}{dt})_{out}= k_{2}x$, but the input pattern of the drug depends on the mode of administration. Considering the nature of drug delivery by application:
+                        </p>
+                        <div class="math">
                             \begin{equation}
                                 \frac{dx}{dt} + k_{2}x = k_{1}Re^{-k_{1}t}
                             \end{equation}
-                        </p>
+                        </div>
                         <p>
                             Solve the above ordinary differential equation:
                             \begin{equation}
@@ -377,24 +649,56 @@
                         <p>
                             So the drug concentration in the blood is $C(t) = \frac{x(t)}{V}$, $V$ is the volume of blood.
                         </p>
-                        <p>
-                            \begin{definition}[Analysis]
-                            \scriptsize Normally,there is always $k_{1}>k_{2}$ because the rate of input is generally greater than the rate of breakdown and excretion before the drug is absorbed, but there will be exceptions. At $k_{1}>k_{2}$  the amount of drug in the body is not very large, which in medical terms is called flip-flop; when $k_{1}=k_{2}$ , the solution of the equation can be considered as an undefined equation of type$\frac{0}{0}$, then L'Hospital's rule can be used to obtain when $k_{2}\rightarrow k_{1}$, the blood drug concentration is $C(t) = \frac{k_{1}R}{V}te^{-k_{1}t}$
-                            \end{definition}
-                        </p>
-                        <div class="img-wrap">
-                            <img src="" alt="">
+                        <section class="s2">
+                            <h3>Definition (Analysis)</h3>
+                            <p>
+                                Normally,there is always $k_{1}>k_{2}$ because the rate of input is generally greater than the rate of breakdown and excretion before the drug is absorbed, but there will be exceptions. At $k_{1}>k_{2}$  the amount of drug in the body is not very large, which in medical terms is called flip-flop; when $k_{1}=k_{2}$ , the solution of the equation can be considered as an undefined equation of type$\frac{0}{0}$, then L'Hospital's rule can be used to obtain when $k_{2}\rightarrow k_{1}$, the blood drug concentration is $C(t) = \frac{k_{1}R}{V}te^{-k_{1}t}$
+                            </p>
+                        </section>
+                        <div class="img" style="width:70%;margin-left: 15%;margin-top: 2vw;">
+                            <img src="../../static/img/model/fig3.bmp" alt="">
                             <div class="des">Figure: Model III Fig</div>
                         </div>
+                        
                     </section>
                 </section>
-                <section>
-                    <h1>References</h1>
-                    <p>Cheng, R., Feng, F., Meng, F., Deng, C., Feijen, J., Zhong, Z., 2011. Glutathione-responsive nano-vehicles as a promising platform for targeted intracellular drug and gene delivery. Journal of controlled release 152, 2–12.</p>
-                    <p>Chiu, L.L., Radisic, M., 2011. Controlled release of thymosin β4 using collagen–chitosan composite hydrogels promotes epicardial cell migration and angiogenesis. Journal of Controlled Release 155, 376–385.</p>
-                    <p>Killion, J.A., Geever, L.M., Devine, D.M., Kennedy, J.E., Higginbotham, C.L., 2011. Mechanical properties and thermal behaviour of pegdma hydrogels for potential bone regeneration application. Journal of the mechanical behavior of biomedical materials 4, 1219–1227.</p>
-                    <p>Parimala, K., Sudha, M., 2012. Effect of hydrocolloids on the rheological, microscopic, mass transfer characteristics during frying and quality characteristics of puri. Food Hydrocolloids 27, 191–200.</p>
+                <section class="ref">
+                    <h1>REFERENCES</h1>
+                    <ul>
+                        <li>[1] Cheng, R., Feng, F., Meng, F., Deng, C., Feijen, J., Zhong, Z., 2011. Glutathione-responsive nano-vehicles as a promising platform for targeted intracellular drug and gene delivery. Journal of controlled release 152, 2–12.</li>
+                        <li>[2] Chiu, L.L., Radisic, M., 2011. Controlled release of thymosin β4 using collagen–chitosan composite hydrogels promotes epicardial cell migration and angiogenesis. Journal of Controlled Release 155, 376–385.</li>
+                        <li>[3] Killion, J.A., Geever, L.M., Devine, D.M., Kennedy, J.E., Higginbotham, C.L., 2011. Mechanical properties and thermal behaviour of pegdma hydrogels for potential bone regeneration application. Journal of the mechanical behavior of biomedical materials 4, 1219–1227.</li>
+                        <li>[4] Parimala, K., Sudha, M., 2012. Effect of hydrocolloids on the rheological, microscopic, mass transfer characteristics during frying and quality characteristics of puri. Food Hydrocolloids 27, 191–200.</li>
+                    </ul>
                 </section>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="t1">Introduction
+                <div class="t2">Contribution</div>
+            </div>
+            <div class="t1">
+                Model I: Chassis
+                <div class="t2">Notations & Assumptions</div>
+                <div class="t2">Overall Explanations of the Model</div>
+                <div class="t2">Algae Growth Dynamics</div>
+                <div class="t2">AGER(Product) Generation Dynamics</div>
+                <div class="t2">Chromoprotein Production & Disease Reporting</div>
+            </div>
+            <div class="t1">
+                Model II: Hydrogel & Drug
+                <div class="t2">Hydrogel Phase Transition & Swelling</div>
+                <div class="t2">Hydrogel Drug Release</div>
+                <div class="t2">
+                    The Whole Process of<br>
+                    Hydrogel Swelling & Drug Release
+                </div>
+            </div>
+            <div class="t1">
+                Model III: Durg Absorption Model
+                <div class="t2">Notations & Assumptions</div>
+                <div class="t2">Pharmacodynamics</div>
             </div>
         </div>
 
@@ -421,29 +725,15 @@
             </div>
         </footer>
     </body>
+    <script src="../../static/js/basic.js"></script>
     <script>
-        // 菜单展开
-        const menu_btn = document.getElementById('menu');
-        menu_btn.onclick = () => {
-            if(menu_btn.classList.contains('active')) {
-                menu_btn.classList.remove('active');
-            } else {
-                menu_btn.classList.add('active');
-            }
+        const t1 = document.querySelectorAll('.t1');
+        const clear_t1 = () => {
+            t1.forEach(item => item.classList.remove('selected'));
         }
-        // scroll reveal
-        // const revealElements = document.querySelectorAll('[data-reveal]');
-        // const scrollReveal = function() {
-        //     len = revealElements.length;
-        //     for(var i = 0; i < len; i++) {
-        //         const isOnScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight;
-        //         if(isOnScreen) {
-        //             revealElements[i].classList.add('show');
-        //         } else {
-        //             revealElements[i].classList.remove('show');
-        //         }
-        //     }
-        // }
-        // window.addEventListener("scroll", scrollReveal);
+        t1.forEach(item => item.addEventListener('click', () => {
+            clear_t1();
+            item.classList.add('selected');
+        }))
     </script>
 </html>
