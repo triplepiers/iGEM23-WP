@@ -141,6 +141,7 @@
     text-decoration: underline;
 }
 .body .content .img .des {
+    font-size: 1.3vw;
     margin-top: .5vw;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
