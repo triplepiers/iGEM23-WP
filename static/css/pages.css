@@ -74,6 +74,9 @@
     padding-right: 55px;
 }
 .menu {
+    max-width: 90vw;
+    max-height: calc(100% - 60px);
+    /* overflow-y: scroll; */
     position: relative;
     opacity: 0;
     transition: 1s;
