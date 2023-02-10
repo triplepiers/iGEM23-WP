@@ -81,7 +81,6 @@
                         <li><a href="../experiments/model.html" target="_top">Model</a></li>
                         <li><a href="../experiments/hardware.html" target="_top">Hardware</a></li>
                         <li><a href="../experiments/proof.html" target="_top">Proof of Concept</a></li>
-                        <li><a href="../experiments/engineering.html" target="_top">Engineering</a></li>
                     </ul>
                 </div>
                 <div id="human" class="menu_item">
@@ -110,7 +109,7 @@
         <div class="body">
             <div class="menu_back"></div>
             <div class="content">
-                <section>
+                <section id="t_1">
                     <h1><strong>Chassis</strong></h1>
                     <p>
                         <strong>Chlamydomonas reinhardtii</strong> was chosen as the chassis for treating chronic diabetic wounds for the following reasons :
@@ -137,7 +136,7 @@
                         <strong>Treatment</strong><br>
                         <strong>Module</strong>
                     </h1>
-                    <section class="s2">
+                    <section class="s2" id="t_2-1">
                         <h2>
                             Secretion of AGEs<br>
                             Binding Protein
@@ -152,7 +151,7 @@
                             <img src="../../static/img/design/fig2.png" alt="">
                         </div>
                     </section>
-                    <section>
+                    <section id="t_2-2">
                         <h2>
                             Secretion of epidermal<br>
                             Growth Factor
@@ -164,7 +163,7 @@
                             <img src="../../static/img/design/fig3.png" alt="">
                         </div>
                     </section>
-                    <section>
+                    <section id="t_2-3">
                         <h2>
                             Use Luciferase to Report<br>
                             the Working State of Cells
@@ -183,7 +182,7 @@
                         <strong>Infection Report</strong><br>
                         <strong>Module</strong>
                     </h1>
-                    <section class="s2">
+                    <section class="s2" id="t_3-1">
                         <h2>
                             Use LasR / LasI System to<br>
                             Sense Bacterial Infection
@@ -199,7 +198,7 @@
                             In engineered Chlamydomonas reinhardtii, we introduced a sequence encoding the receptor protein LasR. When the wound is infected and P.aeruginosa proliferates and releases AHL, the chassis will sense the signal and perform subsequent reporting functions by simulating P.aeruginosa.
                         </p>
                     </section>
-                    <section>
+                    <section id="t_3-2">
                         <h2>
                             Use Chromoprotein<br>
                             As a Signal
@@ -208,7 +207,7 @@
                             In order to generate a primary hazard alert in those C.reinhardtii who was first exposed to the infection signal, we loaded a reporting line in its chloroplasts to guide the expression of chromoprotein through the Pseudomonas aeruginosa quorum sensing promoter pLasI.
                         </p>
                     </section>
-                    <section>
+                    <section id="t_3-3">
                         <h2>
                             Synchronizing Cell Behavior<br>
                             Using Quorum Sensing
@@ -224,7 +223,7 @@
                         </div>
                     </section>
                 </section>
-                <section>
+                <section id="t_4">
                     <h1>
                         <strong>Quorum Sensing</strong><br>
                         <strong>Module</strong>
@@ -244,7 +243,7 @@
                         <div class="des">Quorum Sensing Pathway Design</div>
                     </div>
                 </section>
-                <section>
+                <section id="t_5">
                     <h1>
                         <strong>Biosafety</strong><br>
                         <strong>Module</strong>
@@ -259,7 +258,7 @@
                         <img src="../../static/img/design/fig8.png" alt="">
                     </div>
                 </section>
-                <section>
+                <section id="t_6">
                     <h1><strong>Hardware</strong></h1>
                     <p>
                         Based on the sterile environment of the wound, we designed the dressing to ensure the sterile environment and added protective gear to detect the wound in real-time. Since it is mainly aimed at the elderly, the feedback mechanism uses intuitive protective gear light changes and alarm sounds to inform patients of the wound situation.
@@ -295,36 +294,36 @@
         </div>
 
         <div class="menu">
-            <div class="t1">Chassis</div>
-            <div class="t1">Treatment Module
-                <div class="t2">
+            <div class="t1 scroll" id="1">Chassis</div>
+            <div class="t1 fold">Treatment Module
+                <div class="t2 scroll" id="2-1">
                     Secretion of AGEs<br>
                     Binding Protein
                 </div>
-                <div class="t2">
+                <div class="t2 scroll" id="2-2">
                     Secretion of Epidermal Growth Factor
                 </div>
-                <div class="t2">
+                <div class="t2 scroll" id="2-3">
                     Use Iuciferase to Report
                     the Working State of Cells
                 </div>
             </div>
-            <div class="t1">Infection Report Module
-                <div class="t2">
+            <div class="t1 fold">Infection Report Module
+                <div class="t2 scroll" id="3-1">
                     Use LasR / LasI System to Sense Bacterial Infection
                 </div>
-                <div class="t2">
+                <div class="t2 scroll" id="3-2">
                     Use Chromoprotein<br>
                     As a Signal
                 </div>
-                <div class="t2">
+                <div class="t2 scroll" id="3-3">
                     Synchronizing Cell Behavior<br>
                     Using Quorum Sensing
                 </div>
             </div>
-            <div class="t1">Quorum Sensing Module</div>
-            <div class="t1">Biosafety Module</div>
-            <div class="t1">Hardware</div>
+            <div class="t1 scroll" id="4">Quorum Sensing Module</div>
+            <div class="t1 scroll" id="5">Biosafety Module</div>
+            <div class="t1 scroll" id="6">Hardware</div>
         </div>
 
         <!-- 底栏 -->
@@ -351,14 +350,5 @@
         </footer>
     </body>
     <script src="../../static/js/basic.js"></script>
-    <script>
-        const t1 = document.querySelectorAll('.t1');
-        const clear_t1 = () => {
-            t1.forEach(item => item.classList.remove('selected'));
-        }
-        t1.forEach(item => item.addEventListener('click', () => {
-            clear_t1();
-            item.classList.add('selected');
-        }))
-    </script>
+    <script src="../../static/js/menu.js"></script>
 </html>

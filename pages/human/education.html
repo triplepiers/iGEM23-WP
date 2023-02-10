@@ -80,7 +80,6 @@
                         <li><a href="../experiments/model.html" target="_top">Model</a></li>
                         <li><a href="../experiments/hardware.html" target="_top">Hardware</a></li>
                         <li><a href="../experiments/proof.html" target="_top">Proof of Concept</a></li>
-                        <li><a href="../experiments/engineering.html" target="_top">Engineering</a></li>
                     </ul>
                 </div>
                 <div id="human" class="menu_item">
@@ -109,13 +108,13 @@
         <div class="body">
             <div class="menu_back"></div>
             <div class="content">
-                <section>
+                <section id="t_1">
                     <h1>Introduction</h1>
                     <p>
                         Hello! Here is our Education section, which records our various educational activities! We have designed a wide range of activities to increase public understanding of our projects and of synthetic biology. We hope to make more meaningful attempts in the future. Take a look at our activity log!
                     </p>
                 </section>
-                <section>
+                <section id="t_2">
                     <h1>Questionnaire</h1>
                     <p>
                         In order to find out how much the public knows about keywords such as diabetic foot, synthetic biology and iGEM, we designed a questionnaire. We tried to make our questionnaire gentle, valid and not offensive to anyone, taking into account the protection of personal privacy and respect for patients. We posted it on a public platform and called for people to fill it in. We were very grateful and surprised to receive <b>178 responses</b>. The data from the questionnaire was tallied and we drew conclusions. These findings have helped us to design targeted Education content.
@@ -183,7 +182,7 @@
                         <img src="../../static/img/education/fig5.png" alt="">
                     </div>
                 </section>
-                <section>
+                <section id="t_3">
                     <h1>Scientific Tweets</h1>
                     <p>
                         After the questionnaire, we designed targeted WeChat scientific tweets, including an introduction to diabetic foot and preventive measures, an introduction to synthetic biology and iGEM, and an introduction to GluLeaves. Until Feb 8th , we have received <b>335+ views</b>. We plan to upload our project introduction video to the video platform. We look forward to making more interesting Educational attempts in the future, such as going to school to introduce synthetic biology to students and producing more meaningful content.
@@ -197,7 +196,7 @@
                         Scroll to View the Whole Tweet
                     </div>
                 </section>
-                <section>
+                <section id="t_4">
                     <h1>Pamphlet</h1>
                     <p>
                         We wrote and produced Pamphlets about our project and disease prevention-related publicity pages. To enhance the dissemination of the texts, we tried to use easy-to-understand language so that they could be read and accepted by as many people as possible. In order to have a worldwide impact, we produced a total of eight language versions, including English, Spanish, Japanese, Chinese, Korean, French and Russian. We have attached our flyer here so that you can download it.
@@ -222,10 +221,10 @@
         </div>
 
         <div class="menu">
-            <div class="t1">Introduction</div>
-            <div class="t1">Questionnaire</div>
-            <div class="t1">Scientific Tweets</div>
-            <div class="t1">Pamphlet</div>
+            <div class="t1 scroll" id="1">Introduction</div>
+            <div class="t1 scroll" id="2">Questionnaire</div>
+            <div class="t1 scroll" id="3">Scientific Tweets</div>
+            <div class="t1 scroll" id="4">Pamphlet</div>
         </div>
 
         <!-- 底栏 -->
@@ -252,6 +251,7 @@
         </footer>
     </body>
     <script src="../../static/js/basic.js"></script>
+    <script src="../../static/js/menu.js"></script>
     <script>
         // download Pamphlet
         const pa_dl_btn = document.querySelector('.pa_wrap .btn');

@@ -47,7 +47,6 @@
                         <li><a href="./model.html" target="_top">Model</a></li>
                         <li><a href="#" target="_top">Hardware</a></li>
                         <li><a href="./proof.html" target="_top">Proof of Concept</a></li>
-                        <li><a href="./engineering.html" target="_top">Engineering</a></li>
                     </ul>
                 </div>
                 <div id="human" class="menu_item">
@@ -77,7 +76,7 @@
         <div class="body">
             <div class="menu_back"></div>
             <div class="content">
-                <section>
+                <section id="t_1">
                     <h1>Overview</h2>
                     <p>
                         Chronic diabetic wounds are one of several common complications of diabetes, manifested by extensive wound ulceration, persistent infection, and nerve damage, especially in the feet, and in severe cases, amputation. People with diabetes have a 15-20 times higher risk of amputation than normal people. Fortunately, 85% of amputations are accessible due to the early onset of symptoms. It is important to promote early healing of diabetic wounds. That's why we designed a new portable wound protector that combines our engineered algae to protect diabetic wounds and promote healing. 
@@ -92,7 +91,7 @@
                         <img src="../../static/img/hardware/dress.png" alt="">
                         <div class="des">Appearance</div>
                     </div>
-                    <section>
+                    <section id="t_2_1">
                         <h2>Dressing</h2>
                         <div class="img" style="width:60%; margin-left:20%;">
                             <img src="../../static/img/hardware/fig2.png" alt="">
@@ -160,7 +159,7 @@
                             </div>
                         </section>
                     </section>
-                    <section>
+                    <section id="t_2_2">
                         <h2>Ankle Brace</h2>
                         <div class="img">
                             <img src="../../static/img/hardware/dress.png" alt="">
@@ -240,7 +239,7 @@
                         </section>
                     </section>
                 </section>
-                <section>
+                <section id="t_3">
                     <h1>How to Use</h2>
                     <p>
                         The dressing is applied to the wound first, and then the ankle or other areas are wrapped with a protective gear. The feedback site flashes green at the initial state, white if no infection occurs at the end of treatment, and yellow light if infection occurs. If infection occurs, the buzzer operates at the same time to sound an alarm. The patient can change the dressing by removing the brace.
@@ -250,12 +249,12 @@
         </div>
 
         <div class="menu">
-            <div class="t1">Overview</div>
-            <div class="t1">Design
-                <div class="t2">Dressing</div>
-                <div class="t2">Ankle Brace</div>
+            <div class="t1 scroll" id="1">Overview</div>
+            <div class="t1 fold">Design
+                <div class="t2 scroll" id="2_1">Dressing</div>
+                <div class="t2 scroll" id="2_2">Ankle Brace</div>
             </div>
-            <div class="t1">How to Use</div>
+            <div class="t1 scroll" id="3">How to Use</div>
         </div>
 
         <!-- 底栏 -->
@@ -282,14 +281,5 @@
         </footer>
     </body>
     <script src="../../static/js/basic.js"></script>
-    <script>
-        const t1 = document.querySelectorAll('.t1');
-        const clear_t1 = () => {
-            t1.forEach(item => item.classList.remove('selected'));
-        }
-        t1.forEach(item => item.addEventListener('click', () => {
-            clear_t1();
-            item.classList.add('selected');
-        }))
-    </script>
+    <script src="../../static/js/menu.js"></script>
 </html>

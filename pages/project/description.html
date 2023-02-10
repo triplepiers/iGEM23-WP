@@ -12,6 +12,9 @@
         :root {
             --banner: url('../../static/img/discription/banner.png');
         }
+        .t1:hover {
+            color: var(--d-green);
+        }
     </style>
     <body>
         <!-- 顶栏 -->
@@ -34,7 +37,6 @@
                         <li><a href="../experiments/model.html" target="_top">Model</a></li>
                         <li><a href="../experiments/hardware.html" target="_top">Hardware</a></li>
                         <li><a href="../experiments/proof.html" target="_top">Proof of Concept</a></li>
-                        <li><a href="../experiments/engineering.html" target="_top">Engineering</a></li>
                     </ul>
                 </div>
                 <div id="human" class="menu_item">
@@ -63,7 +65,7 @@
         <div class="body">
             <div class="menu_back"></div>
             <div class="content">
-                <section>
+                <section id="t_1">
                     <h1><strong>Diabetes :</strong><br>
                         A Global Health Issue
                     </h1>
@@ -74,7 +76,7 @@
                         <img src="../../static/img/discription/fig1.png" alt="">
                     </div>
                 </section>
-                <section>
+                <section id="t_2">
                     <h1>Chronic Wound As a <br>Deadly Complication</h1>
                     <p>
                         Under insulin therapy, the risk of diabetes itself has been greatly reduced, but diabetic complications are the real killer hidden behind diabetes. According to the World Health Organization, more than 100 complications of diabetes are discovered, which makes diabetes the disease with the most known complications. More than half of diabetes death cases are caused by complications.
@@ -83,13 +85,13 @@
                         Diabetic chronic wound is one of the common complications of diabetes, which affects the foot most frequently and thus was also known as Diabetic Foot Ulcer (DFU). The amputation rate of diabetic patients is 15-20 times that of normal people. Even after amputation, the mortality rate of patients within 6 months is 20 %, and the mortality rate within 5 years is even up to 50-70 %.
                     </p>
                 </section>
-                <section>
+                <section id="t_3">
                     <h1>Current Treatment</h1>
                     <p>
                         At present, the treatment of DFU mainly includes antibiotic therapy and surgical debridement. However, large-scale use of broad-spectrum antibiotics may lead to bacterial resistance, and amputations remain unavoidable in many cases. Fortunately, although the treatment of DFU in the late stage is difficult, the survey shows that in more than two-thirds (84 %) of non-traumatic lower limb amputation cases caused by diabetic foot, patients will have ulcers in the early stage [2], which is the key to opening the window for early intervention.
                     </p>
                 </section>
-                <section>
+                <section id="t_4">
                     <h1>Our Goal</h1>
                     <p>
                         Our aim is to make a household biological dressing in which the engineered algae will release therapeutic substances to promote the healing of early diabetic wounds, and at the same time alert patients by color when severe bacterial infections occur. The biosafety module is designed to prevent engineered bacteria from leaking into the environment. We also designed a wearable hardware facility to make the reporting function of the dressing more convenient and meet the needs of different people. Through our design, we hope that all diabetics can always run free.
@@ -106,10 +108,10 @@
         </div>
 
         <div class="menu">
-            <div class="t1">Diabetes :<br>A Global Health Issue</div>
-            <div class="t1">Chronic Wound As a <br>Deadly Complication</div>
-            <div class="t1">Current Treatment</div>
-            <div class="t1">Our Goal</div>
+            <div class="t1 scroll" id="1">Diabetes :<br>A Global Health Issue</div>
+            <div class="t1 scroll" id="2">Chronic Wound As a <br>Deadly Complication</div>
+            <div class="t1 scroll" id="3">Current Treatment</div>
+            <div class="t1 scroll" id="4">Our Goal</div>
         </div>
 
         <!-- 底栏 -->
@@ -136,4 +138,5 @@
         </footer>
     </body>
     <script src="../../static/js/basic.js"></script>
+    <script src="../../static/js/menu.js"></script>
 </html>
