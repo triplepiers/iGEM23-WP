@@ -98,6 +98,22 @@
             color: var(--dd-green);
             margin-top: 2vw;
         }
+        @media(width < 900px), (orientation: portrait) {
+            .theorem {
+                width: 100%;
+                margin-left: 0;
+            }
+            .theorem {
+                margin: 5vw 0;
+            }
+            .theorem .content {
+                padding: 2vw 2vw;
+            }
+            .theorem .content .math {
+                overflow-x: scroll;
+                padding: 0;
+            }
+        }
     </style>
     <script>
         MathJax = {
@@ -639,6 +655,7 @@
         </div>
 
         <div class="menu">
+            <div class="btn"><ion-icon name="chevron-back-sharp"></ion-icon></div>
             <div class="t1 fold">
                 Model I: Chassis
                 <div class="t2 scroll" id="2_1">Notations & Assumptions</div>

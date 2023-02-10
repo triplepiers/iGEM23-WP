@@ -12,6 +12,7 @@
     padding: 20px 50px;
     padding-bottom: 8vh;
     gap: 5vh;
+    transition: .5s;
 }
 .banner_wrap .top {
     width: 100%;
@@ -22,6 +23,7 @@
     object-fit: cover;
 }
 .banner_wrap .title_wrap {
+    transition: .5s;
     width: 90%;
     height: 100%;
     display: flex;
@@ -33,6 +35,7 @@
     border: 20px solid var(--d-green);
 }
 .banner_wrap .title_wrap .title {
+    transition: .5s;
     text-align: center;
     position: relative;
     font-family: 'Montserrat', sans-serif;
@@ -59,6 +62,7 @@
     width: 8vw;
     height: 1.5vw;
     background-color: var(--d-green);
+    transition: .5s;
 }
 /* 正文 */
 .body {
@@ -69,6 +73,7 @@
     padding-top: 5vw;
 }
 .menu {
+    position: relative;
     opacity: 0;
     transition: 1s;
     position: fixed;
@@ -87,6 +92,7 @@
     opacity: 1;
 }
 .body .menu_back {
+    transition: .5s;
     flex-shrink: 0;
     width: 25%;
     border-radius: 3px;
@@ -94,6 +100,7 @@
     background-color: var(--l-green);
 }
 .body .content {
+    transition: .5s;
     padding: 50px 100px;
     padding-left: 50px;
     display: flex;
@@ -180,4 +187,72 @@
 }
 .body .content section .s2 {
    margin-top: 0;
+}
+
+@media(width < 900px), (orientation: portrait) {
+    .banner_wrap {
+        gap: 15vh;
+    }
+    .banner_wrap .title_wrap{
+        height: 50vh;
+    }
+    .banner_wrap .title_wrap .title {
+        font-size: 7vw;
+        font-weight: 700;
+        letter-spacing: .2vw;
+        -webkit-text-stroke: 15px var(--d-green);
+    }
+    .banner_wrap .title_wrap .title::after {
+        width: 20vw;
+        height: 2vw;
+    }
+    .body .menu_back {
+        display: none;
+    }
+    .body .content {
+        width: 100%;
+        padding-right: 50px;
+    }
+    .menu {
+        box-shadow: none;
+        top: 50%;
+        transform: translateY(-50%) translateX(-100%);
+        width: auto;
+        height: auto;
+        background-color: #fff;
+        gap: 3vw;
+        border-radius: 2vw;
+    }
+    .menu.taylor {
+        transform: translateY(-50%) translateX(0);
+        box-shadow: 8px 0 11px rgba(109, 183, 162, 0.42);
+    }
+    .menu .btn {
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -3.5vw;
+        width: 3.5vw;
+        height: 6vw;
+        background-color: #fff;
+        border-top-right-radius: .5vw;
+        border-bottom-right-radius: .5vw;
+        box-shadow: 8px 0 11px rgba(109, 183, 162, 0.42);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu .btn ion-icon {
+        font-size: 2vw;
+        color: var(--dd-green);
+        transform: rotate(-180deg);
+        transition: .5s;
+    }
+    .menu.taylor .btn ion-icon {
+        transform: rotate(0deg);
+    }
+    .menu .t1 {
+        font-size: 4vw;
+    }
 }

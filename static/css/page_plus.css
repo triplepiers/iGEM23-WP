@@ -9,7 +9,7 @@
 
 .menu::before {
     content: '';
-    height: 100%;
+    height: calc(100% - 60px);
     width: 5px;
     background-color: var(--d-green);
     position: absolute;
