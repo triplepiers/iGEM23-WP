@@ -60,6 +60,32 @@
             height: 100%;
             object-fit: cover;
         }
+        @media(orientation: portrait) {
+            .body .content .binary .word ul {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: .2vw;
+            }
+            .body .content .binary {
+                padding: 0;
+                gap: 10vw;
+            }
+            .body .content .binary .word ul {
+                gap: 1.5vw;
+            }
+            .body .content .binary .word ul li {
+                font-size: 3.5vw;
+            }
+            .body .content .binary .word ul li::before {
+                left: -2vw;
+            }
+            .body .content .binary .pic img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     </style>
     <body>
         <!-- 顶栏 -->

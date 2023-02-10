@@ -71,6 +71,7 @@
     background-color: #fff;
     display: flex;
     padding-top: 5vw;
+    padding-right: 55px;
 }
 .menu {
     position: relative;
@@ -104,8 +105,7 @@
 }
 .body .content {
     transition: .5s;
-    padding: 50px 100px;
-    padding-left: 50px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 16vw;
