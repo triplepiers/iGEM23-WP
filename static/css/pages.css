@@ -91,6 +91,9 @@
 .menu.show {
     opacity: 1;
 }
+.menu .btn {
+    display: none;
+}
 .body .menu_back {
     transition: .5s;
     flex-shrink: 0;
@@ -188,7 +191,6 @@
 .body .content section .s2 {
    margin-top: 0;
 }
-
 @media(width < 900px), (orientation: portrait) {
     .banner_wrap {
         gap: 15vh;
@@ -232,9 +234,9 @@
         display: block;
         top: 50%;
         transform: translateY(-50%);
-        right: -3.5vw;
-        width: 3.5vw;
-        height: 6vw;
+        right: -6vw;
+        width: 6vw;
+        height: 10vw;
         background-color: #fff;
         border-top-right-radius: .5vw;
         border-bottom-right-radius: .5vw;
@@ -244,7 +246,7 @@
         justify-content: center;
     }
     .menu .btn ion-icon {
-        font-size: 2vw;
+        font-size: 4vw;
         color: var(--dd-green);
         transform: rotate(-180deg);
         transition: .5s;
@@ -254,5 +256,42 @@
     }
     .menu .t1 {
         font-size: 4vw;
+    }
+}
+@media(orientation: portrait) {
+    /* 正文样式调整 */
+    .body .content h1 {
+        font-size: 8vw;
+        margin-bottom: 8vw;
+    }
+    .body .content h1 strong {
+        font-size: 8vw;
+    }
+    .body .content .ref h1 {
+        font-size: 6vw;
+    }
+    .body .content .ref ul {
+        font-size: 3vw;
+        gap: 1.5vw;
+    }
+    .body .content h2 {
+        font-size: 5vw;
+    }
+    .body .content h2 {
+        font-size: 4.5vw;
+    }
+    .body .content p {
+        text-indent: 8vw;
+        font-size: 4vw;
+    }
+    .body .content p b {
+        font-weight: 500;
+    }
+    .body .content section {
+        margin-top: 10vh;
+    }
+    .body .content .img .des {
+        font-size: 3.5vw;
+        margin-top: 2vw;
     }
 }

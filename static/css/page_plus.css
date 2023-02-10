@@ -57,3 +57,17 @@
     font-size: 1.2vw;
     color: var(--d-green);
 }
+@media(width < 900px), (orientation: portrait) {
+    .menu .t1 .t2 {
+        font-size: 3.5vw;
+        font-weight: 400;
+        padding-top: 1.5vw;
+    }
+    .body .content .btn {
+        width: 100%;
+        padding: 2vw;
+    }
+    .body .content .btn a {
+        font-size: 3.5vw;
+    }
+}
