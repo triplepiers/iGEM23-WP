@@ -92,25 +92,6 @@ body {
     transition: .3s;
     transition-delay: 0s;
 }
-/* hover特效 */
-/* .top_bar .menu_wrap .menu_item:hover .title,
-.top_bar .menu_wrap .menu_item:hover .title a
- {
-    position: relative;
-    color: var(--orange);
-    text-shadow: 0 0 2px var(--orange),
-    0 0 4px var(--orange);
-} */
-/* active - 展开 */
-/* .top_bar .menu_wrap .menu_item:hover ion-icon {
-    color: var(--orange);
-    transform: rotate(-90deg);
-} */
-/* 当前页指示 */
-/* .top_bar .menu_wrap .menu_item.cur .title {
-    color: var(--orange);
-    text-decoration: underline;
-} */
 /* 子菜单 */
 .top_bar .menu_wrap .menu_item .choice {
     position: absolute;
@@ -223,7 +204,7 @@ body {
     letter-spacing: .5px;
 }
 /* 响应式 */
-@media(width < 1035px), (orientation: portrait) {
+@media(width < 900px), (orientation: portrait) {
     .top_bar .menu_btn {
         display: flex;
         align-items: center;

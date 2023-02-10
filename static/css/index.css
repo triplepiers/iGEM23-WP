@@ -39,10 +39,14 @@
     left: 0;
     width: 100%;
     height: auto;
+    min-height: 20vh;
+    background-color: var(--ll-green);
+    transition: .5s;
 }
-#sec1 .bottom img {
+#sec1 .bottom > img {
     width: 100%;
     object-fit: cover;
+    background-color: #fff;
 }
 #sec1 .bottom .word_wrap {
     width: 100%;
@@ -52,7 +56,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: .5s;
 }
 #sec1 .bottom .word_wrap .word {
     position: relative;
@@ -68,6 +72,7 @@
     height: 5px;
     width: 30%;
     background-color: var(--d-green);
+    transition: .5s;
 }
 #sec1 .bottom .word_wrap .word .right_top::after {
     content: '';
@@ -77,6 +82,7 @@
     width: 4px;
     height: 20px;
     background-color: var(--d-green);
+    transition: .5s;
 }
 #sec1 .bottom .word_wrap .word .left_bottom {
     position: absolute;
@@ -85,6 +91,7 @@
     height: 5px;
     width: 30%;
     background-color: var(--d-green);
+    transition: .5s;
 }
 #sec1 .bottom .word_wrap .word .left_bottom::before {
     content: '';
@@ -94,6 +101,7 @@
     width: 4px;
     height: 20px;
     background-color: var(--d-green);
+    transition: .5s;
 }
 
 #sec1 .bottom .main_img {
@@ -105,6 +113,7 @@
     bottom: 60%;
     width: 50%;
     height: auto;
+    transition: .5s;
 }
 #sec1 .bottom .main_img:hover {
     animation: swag 1s linear;
@@ -515,11 +524,12 @@
 #sec5 .right_wrap .word::before {
     content: '';
     position: absolute;
-    right: 1vw;
+    right: 0;
     top: -4vw;
     height: 1vw;
     width: 10%;
     background-color: var(--d-green);
+    transition: .5s;
 }
 #sec5 .right_wrap .word {
     opacity: 0;
@@ -535,15 +545,15 @@
 }
 #sec5 .right_wrap .word p {
     margin-bottom: 2vw;
+    text-align: justify;
+    text-indent: 4vw;
 }
 #sec5 .right_wrap .word p strong {
     font-weight: 500;
     color: var(--d-green);
 }
-
 #sec5 .left_wrap {
     position: absolute;
-
     right: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -552,6 +562,7 @@
     display: flex;
     flex-direction: row-reverse;
     gap: 1vw;
+    transition: .5s;
 }
 #sec5.show .left_wrap{
     animation: go_right .5s ease-out forwards;
@@ -744,6 +755,10 @@
     opacity: 1;
     top: 0;
 }
+#sec6 .top .card_wrap.show .card:hover {
+    transform: scale(1.05);
+    transition-delay: 0;
+}
 #sec6 .top .card_wrap .card .img {
     position: absolute;
     bottom: 5vw;
@@ -793,6 +808,7 @@
     box-shadow: 2px 5px 10px rgba(0,0,0,.1);
     font-family: 'Montserrat', sans-serif;
     color: var(--dd-green);
+    transition: .5s;
 }
 #sec7 .card .word {
     font-size: 2vw;
@@ -819,6 +835,7 @@
     padding: 0 1.5vw;
     background-color: var(--d-green);
     border-radius: 1.8vw;
+    transition: .5s;
 }
 #sec7 .card .button a {
     color: #fff;
@@ -834,4 +851,75 @@
     background-size: cover;
     width: 7vw;
     height: 13vw;
+    transition: .5s;
+}
+/* 响应式 */
+@media(width < 900px), (orientation: portrait) {
+    #sec1 .bottom {
+        min-height: 40vh;
+    }
+    #sec1 .bottom .main_img {
+        bottom: 80%;
+        width: 70%;
+    }
+    #sec1 .bottom .word_wrap {
+        width: 80%;
+        left: 10%;
+        text-align: center;
+    }
+    #sec1 .bottom .word_wrap .word .right_top {
+        top: -10px;
+        right: 15px;
+        width: 20%;
+    }
+    #sec1 .bottom .word_wrap .word .left_bottom {
+        bottom: -10px;
+        left: 15px;
+        width: 20%;
+    }
+    #sec5 .left_wrap {
+        height: 40%;
+        top: 30%;
+    }
+    #sec5 .right_wrap .word {
+        top: 70%;
+        width: 80%;
+    }
+    #sec5 .right_wrap .word::before {
+        width: 20%;
+    }
+    #sec5 .right_wrap .word p {
+        line-height: 3.5vw;
+    }
+    #sec6 {
+        
+    }
+    #sec6 .back .bottom {
+        bottom: 40vh;
+    }
+    #sec6 .top .card_wrap {
+        bottom: 60vh;
+    }
+    #sec6 .top .title {
+        position: absolute;
+        right: 12vw;
+        bottom: calc(60vh + 27vw);
+    }
+    #sec7 .card {
+        height: 30%;
+    }
+    #sec7 .card .word {
+        width: 80%;
+        top: 4vh;
+    }
+    #sec7 .card .button {
+        bottom: 4vh;
+        right: 12vw;
+        padding: .5vw 1.5vw;
+        border-radius: 1vw;
+    }
+    #sec7 .img {
+        bottom: 4vh;
+        right: 4vw;
+    }
 }
