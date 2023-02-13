@@ -43,7 +43,7 @@ body {
     padding: 0 60px;
 }
 /* 底下的横线 */
-.top_bar::after {
+.top_bar::before {
     content: '';
     width: calc(100% - 100px);
     height: 1px;
