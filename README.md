@@ -5,7 +5,7 @@
 一些寒假小作业
 
 - [Prototype](https://www.figma.com/file/xiFm61PP0QDr5IQc2YfswU/GLULEAVES?node-id=43%3A525&t=Zb46OdEWifoNnrkz-0)
-- [Preview](https://triplepiers.github.io/iGEM_WP/#)
+- [Preview](https://triplepiers.github.io/iGEM23-WP/)
 
 ---
 
