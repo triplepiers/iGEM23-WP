@@ -97,24 +97,26 @@ body {
     position: absolute;
     top: 60px;
     left: 50%;
-    transform: translateX(-50%);
-
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    transition: .5s;
     display: flex;
     flex-direction: column;
     
     background-color: #fff;
-    transform: translateX(-50%);
     
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 
     overflow: hidden;
-    height: 0;
+    height: auto;
 
     box-shadow: 5px 3px 10px #6CC3A4;
 }
 .top_bar .menu_wrap .menu_item:hover .choice {
+    transition: .5s;
     height: auto;
+    transform: translateX(-50%) scaleY(1);
     border-top: 3px solid var(--d-green);
 }
 .top_bar .menu_wrap .menu_item a {
