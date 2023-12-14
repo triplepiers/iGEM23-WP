@@ -1,0 +1,107 @@
+.table {
+    width: 100%;
+    overflow: scroll;
+    margin: 15px 0;
+    position: relative;
+    padding: 0 5%;
+  }
+  
+  .table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    perspective: 500px;
+    transform-style: preserve-3d;
+  }
+  
+  .table table caption {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    font-size: 1em;
+    padding: 0.5em 0;
+  }
+  
+  .table table tr {
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .table table tr:hover {
+    transform: perspective(500px) translate3d(0, 0, 15px);
+  }
+  
+  .table table tr:first-child:hover,
+  .table table tr.head:hover {
+    transform: none;
+    background-color: var(--bg);
+  }
+  
+  .table table tr:hover th:first-child,
+  .table table tr:hover td:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .table table tr:hover th:last-child,
+  .table table tr:hover td:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .table table tr th {
+    font-size: 0.8em;
+    padding: 10px 20px;
+    font-weight: 600;
+  }
+  
+  .table table tr td {
+    font-family: monospace;
+    font-weight: 200;
+    font-size: 0.8em;
+    padding: 10px 20px;
+    min-width: 50px;
+    transition: 0.5s;
+  }
+  
+  .table table tr td.s {
+    font-size: 0.7vw;
+  }
+  
+  .table table tr th:first-child,
+  .table table tr td:first-child {
+    max-width: 18vw;
+  }
+  
+  .table table caption {
+    font-family: "Nunito-Bold", sans-serif;
+    color: var(--dg);
+    background-color: var(--lg);
+  }
+  
+  .table table tr {
+    font-family: "Nunito-Reg", sans-serif;
+    color: var(--font);
+    border-left: 1px solid var(--lg);
+    border-right: 1px solid var(--lg);
+  }
+  
+  .table table tr:first-child,
+  .table table tr.head {
+    color: var(--dg);
+    border-bottom: 1px solid var(--lg);
+    border-top: 1px solid var(--lg);
+  }
+  
+  .table table tr:last-child {
+    border-bottom: 1px solid var(--lg);
+  }
+  
+  .table table tr:hover {
+    background-color: var(--lg);
+  }
+  
+  .table table tr td:hover {
+    color: var(--y);
+    background-color: var(--mg);
+  }

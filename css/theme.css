@@ -1,0 +1,85 @@
+body {
+    background-color: var(--bg);
+    font-family: "Nunito-Reg", sans-serif;
+    font-weight: 400;
+    color: var(--font);
+    font-size: 18px;
+  }
+  
+  .main .menubg #menu {
+    color: #FFFDF5;
+  }
+  .main .menubg #menu .t1 {
+    font-family: "Montserrat-Bold", sans-serif;
+    color: var(--mg);
+  }
+
+  .main .menubg #menu .t1.unfold + .h2-sec {
+    color: var(--y);
+  }
+  .main .menubg #menu .t2 {
+    font-family: "Montserrat-Bold", sans-serif;
+    color: var(--mg);
+  }
+  .main .menubg #menu .t2.show {
+    color: var(--y);
+  }
+  .main #content {
+    background-color: #FFFDF7;
+  }
+  .main #content::before {
+    background-color: var(--mg);
+  }
+  .main #content h1 {
+    position: relative;
+    color: var(--mg);
+    font-family: "Titan", sans-serif;
+    font-size: 40px;
+  }
+  .main #content h2 {
+    font-size: 30px;
+    color: var(--mg);
+    font-family: "Montserrat-Bold", sans-serif;
+  }
+  .main #content h3 {
+    font-size: 20px;
+    color: var(--y);
+    font-family: "Montserrat-Bold";
+  }
+  .main #content strong {
+    color: var(--dg);
+    font-family: "Nunito-Bold";
+  }
+  .main #content .quote {
+    text-indent: 0;
+    opacity: .8;
+    border-left: 2px solid var(--mg);
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-style: italic;
+  }
+  .main #content .quote .author {
+    display: block;
+    text-align: right;
+  }
+
+  .main #content .ref a {
+    color: var(--font);
+    text-decoration: none;
+  }
+
+  .main #content a,
+  #block a {
+    color: var(--y);
+    text-decoration: underline;
+    background-image: linear-gradient(0deg, transparent, transparent);
+    transition: .6s;
+  }
+  .main #content a:hover,
+  #block a:hover {
+    background-image: linear-gradient(0deg, var(--y) 0%, var(--y) 40%, transparent 31%, transparent 100%);
+    color: var(--font);
+  }
+  .main #content .img-wrap .disc {
+    color: var(--disc);
+  }
