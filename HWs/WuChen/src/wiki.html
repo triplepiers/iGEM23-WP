@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>My static web page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="page">
+        <div class="nav">
+            <ul class="fr">
+                <a href="fs.html"><li>favorite singer</li></a>
+                <a href="fbs.html"><li>favorite books</li></a>
+                <a href="thoughts.html"><li>Some thoughts</li></a>
+            </ul>
+        </div>
+        <div class="right fl">
+            <div class="wz">
+                <h1>My static web page</h1>
+                <img src="22.jpg" alt ="">
+                <p>Hello!! This is my static web page. It is made by HTML and CSS.</p>
+                <p>I am a Grade 22 student of computer science.I am a shy girl, not very good at expressing myself. I love reading books and listening to music. And I am glad to introduce my favorite singer and books to you!!</p>
+            </div>
+        </div>
+    </div>
+    <div class = "footer">
+        <br />
+        <p>你好，我是阿涩</p><br />
+        <p>很高兴认识你</p><br />
+        <p>Copyright © 2023 shise</p>
+    </div>
+    <div class="yinyue">
+        <img class="music" src="4054.png_860.png" alt="">
+        <audio controls>
+            <source src="DooPiano - Ditto (V0).mp3" type="audio/mp3">
+            <embed height="50" width="100" src="DooPiano - Ditto (V0).mp3">
+          </audio>
+
+    </div>
+    <script>
+        let mucics = document.getElementById('audio')
+        document.body.addEventListener('mousemove', function() {
+            setTimeout(() => {
+                mucics.play();
+            }, 2000);
+        }, false);
+    </script>
+
+</body>
+</html>

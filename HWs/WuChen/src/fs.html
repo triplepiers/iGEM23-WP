@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>My static web page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <button class="bt" onclick="window.location.href = 'wiki.html'">back</button>
+    <div class="page">
+        <div class="nav">
+            <ul class="fr">
+                <a href="fs.html"><li>favorite singer</li></a>
+                <a href="fbs.html"><li>favorite books</li></a>
+                <a href="thoughts.html"><li>Some thoughts</li></a>
+            </ul>
+        </div>
+        <div class="right fl">
+            <div class="wz">
+                <h1>My favorite singer: Lana Del Rey</h1>
+                <div class="photol">
+                    <img src="lana11.jpg" alt ="">
+                </div>
+                <div class="intro">
+                    <p>Elizabeth Woolridge Grant (born June 21, 1985), known professionally as Lana Del Rey, is an American singer-songwriter. Her music is noted for its cinematic quality and exploration of tragic romance, glamour, and melancholia, with frequent references to contemporary pop culture and 1950s–70s Americana.</p>
+                </div>
+            </div>
+            <div class="introl">
+                <p>第一次听打雷姐的歌是在初中，那时正值青春成长阵痛期，突然听《young and beautiful》，实在是喜欢的不得了，可以说这首歌是我的入门曲。打雷姐的歌里仿佛都带着神性，曼妙歌声能让灵魂超脱凡俗直抵天堂，陪伴我度过敏感孤独的成长期。</p>
+                <p>打雷姐好听的歌真的太多了，浅浅<a href = "https://music.163.com/#/artist?id=66212">放个链接</a>叭~~~///(^v^)\\\~~~</p>
+            </div>
+            <div class="photor"><img src="lana22.jpg" alt =""></div>
+        </div>
+    </div>
+    <div class = "footer">
+        <br />
+        <p>你好，我是阿涩</p><br />
+        <p>很高兴认识你</p><br />
+        <p>Copyright © 2023 shise</p>
+    </div>
+    <div class="yinyue">
+        <img class="music" src="4054.png_860.png" alt="">
+        <audio controls>
+            <source src="DooPiano - Ditto (V0).mp3" type="audio/mp3">
+            <embed height="50" width="100" src="DooPiano - Ditto (V0).mp3">
+          </audio>
+
+    </div>
+    <script>
+        let mucics = document.getElementById('audio')
+        document.body.addEventListener('mousemove', function() {
+            setTimeout(() => {
+                mucics.play();
+            }, 2000);
+        }, false);
+    </script>
+
+</body>
+</html>

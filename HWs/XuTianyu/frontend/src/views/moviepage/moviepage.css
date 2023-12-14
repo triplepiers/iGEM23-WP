@@ -1,0 +1,243 @@
+.mainpage_container{
+    padding-bottom: 100px;
+}
+.moviepage_nav{
+    border-bottom: 1px solid rgb(255,255,255,0.1);
+}
+.moviepage_content{
+    width: 1050px;
+    margin: auto;
+    /* height: 600px; */
+    /* background-color: red; */
+    margin-top:40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.moviepage_content .leftpart{
+    /* height:100%; */
+    width:70%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.moviepage_content .leftpart .dscp{
+    width: 70%;
+    height: 100%;
+    /* background-color: green; */
+}
+
+.moviepage_content .leftpart .upperboard{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.moviepage_content .leftpart .upperboard .dscp h1{
+    color:white;
+    margin-bottom: 30px;
+}
+.moviepage_content .leftpart .upperboard  .dscp>div{
+    display: flex;
+    justify-content: space-between;
+}
+.moviepage_content .leftpart .upperboard  .dscp>div>div{
+    box-sizing: border-box;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.moviepage_content .leftpart .upperboard  .dscp>div>div>div{
+    margin-bottom: 10px;
+}
+.moviepage_content .leftpart .upperboard  .dscp>div img{
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2px;
+}
+
+.moviepage_content .leftpart .upperboard  .dscp>div>div{
+    width: 66%;
+    /* background-color: pink; */
+    color:rgb(185, 185, 185);
+    font-size: 13px;
+}
+
+.moviepage_content .leftpart .upperboard .rate{
+    /* background-color: #fff; */
+    height: 100%;
+    width:25%;
+    border-left: 1px solid rgb(255,255,255,0.1);
+    padding-left: 25px;
+}
+
+.moviepage_content .leftpart .upperboard .rate>p{
+    color:rgb(185, 185, 185);
+    font-size: 14px;
+}
+.moviepage_content .leftpart .upperboard .rate>ul{
+    margin-top: 12px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+.moviepage_content .leftpart .upperboard .rate>ul>li{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+.moviepage_content .leftpart .upperboard .rate>div.rateshow{
+    height: 80px;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(255,255,255,0.1);
+    margin-bottom: 25px;
+}
+
+.moviepage_content .leftpart .upperboard .rate>div.rateshow>div>p{
+    margin-top: 3px;
+    font-size: 12px;
+    height: 20px;
+    color:rgb(185, 185, 185);
+    font-weight: lighter;
+}
+.moviepage_content .leftpart .upperboard .rate>div.rateshow>div{
+    margin-left: 15px;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.moviepage_content .leftpart .upperboard .rate>div.rateshow~div{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: rgb(185,185,185);
+    font-size: 12px;
+}
+
+.moviepage_content .leftpart .upperboard .rate>div.rateshow~div div:hover{
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.moviepage_content .leftpart .upperboard .rate>div.rateshow~div ul{
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.moviepage_content .leftpart .upperboard .rate>div.rateshow~div ul>li{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+.moviepage_content .leftpart .plot p{
+    color: rgb(185, 185, 185);
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: lighter;
+    margin-top: 20px;
+    max-height: 200px;
+    height: auto;
+    overflow: auto;
+}
+.moviepage_content .leftpart .plot span:hover{
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(220,220,220);
+    border-radius: 10px;
+}
+.moviepage_content .leftpart .actorlist{
+    margin-bottom: 40px;
+}
+.moviepage_content .leftpart .actorlist,.moviepage_content .leftpart .plot{
+    width: 100%;
+    /* background-color: #fff; */
+    margin-top: 30px;
+    /* height: 100px; */
+    margin-bottom: 30px;
+}
+
+.moviepage_content .leftpart .actorlist h2,.moviepage_content .leftpart .plot h2{
+    color: rgb(220,220,220);
+    font-size: 20px;
+}
+
+.moviepage_content .leftpart .actorlist>div{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    overflow:auto;
+}
+.moviepage_content .leftpart .actorlist .actorcard{
+    flex: 0 0 auto;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+.moviepage_content .leftpart .actorlist .actorcard:hover{
+    cursor: pointer;
+}
+
+.moviepage_content .leftpart .actorlist .actorcard img{
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+}
+.moviepage_content .leftpart .actorlist .actorcard>p{
+    color:rgb(185, 185, 185);
+    font-size: 12px;
+}
+
+.ant-rate-star-zero svg{
+    color: #424242; 
+  }
+.moviepage_content .leftpart .comments{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.moviepage_content .leftpart .comments h2{
+    color: rgb(220,220,220);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.moviepage_content .leftpart .comments>div>div{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: rgb(185,185,185);
+    font-size: 12px;
+    width: 100%;
+    border-top: 1px solid rgb(255,255,255,0.1);
+}
+
+.moviepage_content .leftpart .comments>div>div>span{
+    margin-right: 15px;
+    font-size: 14px;
+}
+.moviepage_content .leftpart .comments>div>div>p{
+    margin-top: 10px;
+    line-height: 20px;
+}
+
+.moviepage_content .rightpart{
+    /* height:800px; */
+    width:25%;
+    /* background-color: gray; */
+    /* border-left: 1px solid white ; */
+}

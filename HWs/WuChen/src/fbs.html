@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>My static web page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <button class="bt" onclick="window.location.href = 'wiki.html'">back</button>
+    <div class="page">
+        <div class="nav">
+            <ul class="fr">
+                <a href="fs.html"><li>favorite singer</li></a>
+                <a href="fbs.html"><li>favorite books</li></a>
+                <a href="thoughts.html"><li>Some thoughts</li></a>
+            </ul>
+        </div>
+        <div class="right fl">
+            <div class="wz">
+                <h1>My favorite books</h1>
+                <div class="photol">
+                    <a href="https://baike.baidu.com/item/%E9%BB%84%E9%87%91%E6%97%B6%E4%BB%A3/13130552">
+                        <img src="hjsd.jpg" alt="">
+                    </a>
+                </div>
+                <div class = "intro">
+                    <p>《黄金时代》 王小波著</p>
+                    <p>纯真的，淫乱的，克制的，放纵的，幽默的，讽刺的，尽兴的，遗憾的。复杂动荡的年代里，两个被放逐的人跑到了被放逐的世界。这个世界充满了原始的自由欲望，却又一直存在看不见的不能爱的禁制。</p>
+                </div>
+            </div>
+            <div class="wz">
+                <div class = "introl">
+                    <p>《了不起的盖茨比》菲茨杰拉德著</p>
+                    <p>我的文学启蒙书，悲剧往往令人印象深刻，也更有美学意义。提起这本书，便想起二十世纪初纽约纸醉金迷、灯红酒绿的喧嚣，在声色犬马中，有一个人游离在外，他在充满海雾的码头边，执着地想要握住对岸飘渺不定的绿光。
+                        他在一片浑浊中坚守着自己纯真的理想，即使理想早已悄然幻灭，而他也心知肚明。</p>
+                </div>
+                <div class = "photor">
+                    <a href="https://baike.baidu.com/item/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E7%9B%96%E8%8C%A8%E6%AF%94/1535">
+                        <img src = "TGG.jpg" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <div class = "photol">
+                <a href= "https://baike.baidu.com/item/%E3%80%8A%E6%83%85%E4%BA%BA%E3%80%8B/997216">
+                    <img src = "lamant.jpg" alt="">
+                </a>
+            </div>
+            <div class = "intro">
+                <p>《情人》杜拉斯著</p>
+                <p>70岁已然白发苍苍的杜拉斯饱含深邃的激情，以诗歌般的语言，挖掘出半个多世纪前一段尘封往事。杜拉斯以爱为名将男女主人公高调亮相，使得那些关于殖民地家族创业失败的灰暗背景、对母亲与兄弟间龌龊纷争的挚爱与至恨，青春的幻灭、摧残与渴求……统统归于幕后。只有杜拉斯笔下的那个孱弱不堪的中国情人，仿佛幽深隧道中惟一的光，穿越时空而来。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class = "footer">
+        <br />
+        <p>你好，我是阿涩</p><br />
+        <p>很高兴认识你</p><br />
+        <p>Copyright © 2023 shise</p>
+    </div>
+    <div class="yinyue">
+        <img class="music" src="4054.png_860.png" alt="">
+        <audio controls>
+            <source src="DooPiano - Ditto (V0).mp3" type="audio/mp3">
+            <embed height="50" width="100" src="DooPiano - Ditto (V0).mp3">
+          </audio>
+
+    </div>
+    <script>
+        let mucics = document.getElementById('audio')
+        document.body.addEventListener('mousemove', function() {
+            setTimeout(() => {
+                mucics.play();
+            }, 2000);
+        }, false);
+    </script>
+
+</body>
+</html>
