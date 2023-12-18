@@ -75,10 +75,47 @@
 
 ### 3 自适应
 
+一些大概是 `amfe-flexible`  引发的 bug：
 
+- 似乎没有正确应用到 `go-top` 按钮上 (?)，宽度不够时看不到按钮
 
-- 熟练依赖，cSS覆盖太少 + github 手搓
-- 宽度不够看不到 go-top
-- slider 点太小了
-- 
-- typeJS 代替打字机？留点高度
+- 会影响 `locked` 的计算准确性（如下图）
+
+  => 目测是因为 `bannerH` 仅在 mouted 时被计算，而在 `window.resize` 时没有被及时更新
+  ![](./img/c-bannerH.png)
+
+---
+
+> 以及个人觉得 `amfe-flexible`  以 viewWidth 来缩放设计稿并不是一个合理的解决方案（传统意义上的自适应应该是类似于 Bootstrap 的响应式方案？）
+
+<center>至少在屏宽度小的时候不太妙</center>
+
+![](./img/c-thin.png)
+
+---
+
+另外，HomeView 的背景填充在偏带鱼屏比例时有 bug
+
+> => 建议为 `.home` 添加 `background-size: cover;`
+
+![](./img/c-fat.png)
+
+### 4 TypeWriter
+
+手搓值得尊敬，但其实有更成熟的解决方案 —— [typedJS](https://github.com/mattboldt/typed.js/)
+
+> => 说实话我觉得这玩意儿最痛苦的地方在于怎么定位结尾的光标 orz
+
+###  5 (可忽略) 页面设计 
+
+- TypeWriter 的容器最好预设足够的高度， “首页” 和 “Blog” 跟着输出字符下移会有一点抽象
+
+- Slider 的索引点有点小了 + 默认样式和背景图片的对比度不高，用户手动点击进行滚动比较困难
+
+  => 建议还是预设 autoplay，然后在通过监听鼠标 移入/移出 分别 停止/开始 自动播放
+
+- GitHub 的默认 Markdown 实在称不上美观 orz，直接当 Blog 主题可能会有一点抽象
+
+  => 可以去 [Typora](https://theme.typoraio.cn/)（或者其他地方）掏一份好的 Markdown 主题，然后用 SCSS 在外面包一层 `.markdown-body` 选择器
+
+- 不太建议用 element UI 的组件（好歹覆盖一下 dialogBox 的样式鸭）
